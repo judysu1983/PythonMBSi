@@ -1,0 +1,33 @@
+*** Installation started 2017/02/02 13:32 ***
+Source: C:\Users\v-judysu\Downloads\watcher-0.2.1.win32-py2.7.exe
+999 Root Key: HKEY_CURRENT_USER
+020 Reg DB Key: [Software\Microsoft\Windows\CurrentVersion\Uninstall]watcher-py2.7
+040 Reg DB Value: [Software\Microsoft\Windows\CurrentVersion\Uninstall\watcher-py2.7]DisplayName=Python 2.7 watcher-0.2.1
+040 Reg DB Value: [Software\Microsoft\Windows\CurrentVersion\Uninstall\watcher-py2.7]UninstallString="C:\Python27\Removewatcher.exe" -u "C:\Python27\watcher-wininst.log"
+200 File Copy: C:\Python27\Lib\site-packages\FileSystemWatcher.py
+200 File Copy: C:\Python27\Lib\site-packages\FileSystemWatcher.pyc
+200 File Copy: C:\Python27\Lib\site-packages\watcher-0.2.1-py2.7.egg-info
+100 Made Dir: C:\Python27\Lib\site-packages\watcher
+200 File Copy: C:\Python27\Lib\site-packages\watcher\_watcher.pyd
+200 File Copy: C:\Python27\Lib\site-packages\watcher\__init__.py
+200 File Copy: C:\Python27\Lib\site-packages\watcher\__init__.pyc
+100 Made Dir: C:\Python27\Lib\site-packages\watcher\tests
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\test_FileSystemWatcher.py
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\test_FileSystemWatcher.pyc
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\test_watcher.py
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\test_watcher.pyc
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\__init__.py
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\__init__.pyc
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\__main__.py
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\__main__.pyc
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\__init__.pyc
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\test_watcher.pyc
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\test_FileSystemWatcher.pyc
+200 File Copy: C:\Python27\Lib\site-packages\watcher\__init__.pyc
+200 File Copy: C:\Python27\Lib\site-packages\FileSystemWatcher.pyc
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\__main__.pyo
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\__init__.pyo
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\test_watcher.pyo
+200 File Copy: C:\Python27\Lib\site-packages\watcher\tests\test_FileSystemWatcher.pyo
+200 File Copy: C:\Python27\Lib\site-packages\watcher\__init__.pyo
+200 File Copy: C:\Python27\Lib\site-packages\FileSystemWatcher.pyo

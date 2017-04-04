@@ -1,0 +1,906 @@
+
+<lp:Filters xmlns:lp="http://www.lionbridge.com/logoport/2005">
+ <lp:filter name="Teaspoon LCX" version="1.0" xml:space="preserve">
+ExportFilters:
+Custom 3	Equals	CDM_Weekly.Apr.4
+Dev Src Lock	NotEquals	On
+User Src Lock	NotEquals	On
+
+InformationalFieldsToExport:
+0	Previous Source
+1	Instructions
+1	Term Note
+1	Resource ID
+0	Text Loc Status
+0	Translation Origin
+0	String Category
+0	Approval Status
+0	User Src Lock
+0	Dev Src Lock
+0	User Trans Lock
+0	Modified Date
+0	Modified By
+0	Confidence Level
+0	Custom 1
+0	Custom 2
+0	Custom 3
+0	Custom 4
+0	Custom 5
+0	IQA
+1	TranslationStatusPosition
+1	VendorComment
+
+EditableFieldsToExport:
+1	Term Note
+1	Resource ID
+0	Text Loc Status
+0	String Category
+0	Approval Status
+0	Confidence Level
+0	Custom 1
+1	Custom 2
+0	Custom 3
+1	Custom 4
+0	Custom 5
+0	IQA
+1	TranslationStatusPosition
+1	VendorComment
+
+SplitWordCount:
+0
+
+ApplyXLZSegmentation:
+False
+
+SourceABBRSkipSegmentationList:
+
+AutoCCJIntersegmentSpaceFixing:
+True
+
+AutoFixXmlTagIndention:
+True
+
+ExtractPreviousSourceTargetInUpdatedStrings:
+False
+
+ImportOtherFieldsFromNotesOnXlzImport:
+True
+
+BulkSetFieldsOnXmlXlzImportExport:
+Text Loc Status=Localized
+Approval Status=Pre-Approved
+
+UpdateFieldValuesForChangedStringsOnly:
+False
+
+DoNotUpdateModifiedDate:
+False
+
+ApplyExplicitContextMatch:
+True
+ </lp:filter>
+ <lp:filter name="DOCX" version="1.0">
+        <lp:settings cleanFont="true" cleanScript="false" convTrackChange="false" createTrackChangeInsertOnTarget="false" createTrackChangeInsertOnTargetItem="false" diagrams="false" exportAnchor="true" exportComments="true" extractFieldDisplay="false" extractFormText="false" extractMacroButton="false" includeSource="true"/>
+ </lp:filter>
+ <lp:filter name="MIF" version="1.0">
+      <lp:settings includeSource="true">
+    
+  
+    
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  <!--
+			Char_cq_Tag - if true filter inserts tag for simple left/right quote symbol otherwise it inserts its code
+			Char_dcq_Tag - if true filter inserts tag for double left/right quote symbol otherwise it inserts its code
+			Char_dh_Tag - if true filter inserts tag for discretional hyphen symbol otherwise it inserts its code
+			Char_ems_Tag - if true filter inserts tag for emspace symbol otherwise it inserts its code
+			Char_ens_Tag - if true filter inserts tag for enspace symbol otherwise it inserts its code
+			Char_fq_Tag - if true filter inserts tag for french left/right quote symbol otherwise it inserts its code
+			Char_gq_Tag - if true filter inserts tag for german left/right quote symbol otherwise it inserts its code
+			Char_gt_Tag - if true filter inserts tag for greater symbol otherwise it inserts its code
+			Char_hh_Tag - if true filter inserts tag for hard hyphen symbol otherwise it inserts its code
+			Char_hs_Tag - if true filter inserts tag for hard space symbol otherwise it inserts its code
+			Char_lt_Tag - if true filter inserts tag for lower symbol otherwise it inserts its code
+			Char_nh_Tag - if true filter inserts tag for o hyphen symbol otherwise it inserts its code
+			Char_ns_Tag - if true filter inserts tag for number space symbol otherwise it inserts its code
+			Char_sh_Tag - if true filter inserts tag for soft hyphen symbol otherwise it inserts its code
+			Char_t_Tag - if true filter inserts tag for tab symbol otherwise it inserts its code
+			Char_ts_Tag - if true filter inserts tag for thin space symbol otherwise it inserts its code
+		-->
+		    <lp:CharacterConv Char_cq_Tag="false" Char_dcq_Tag="false" Char_dh_Tag="true" Char_ems_Tag="true" Char_ens_Tag="true" Char_fq_Tag="false" Char_gq_Tag="false" Char_gt_Tag="true" Char_hh_Tag="true" Char_hs_Tag="true" Char_lt_Tag="true" Char_nh_Tag="true" Char_ns_Tag="true" Char_sh_Tag="true" Char_t_Tag="true" Char_ts_Tag="true"/>
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    <!-- 
+   Comments_Translatable - if it's true the comments' text is marked as translatable otherwise not.
+   HR_Insert - insert new line after each <hr> tag (true/false)
+   Hypertext_Translatable - marks hypertext(alert, hyperlink, alerttitle) as translatable text if true. All other types of hypertext are always untranslatable.
+   Hyph="ON" - write hyphen symbol as tag (true - write tag, false - don't write hyphen at all)
+   IE_Insert - inline index marker in its original position in the text (true - original position, false - at the end of a  paragraph)
+   Insert_indexies_sorting - Insert sorting info to index text  
+   TextInset_Translatable - marks TextInset as translatable text if true.
+   -->
+      <lp:Other Comments_Translatable="true" Delete_temp_xml="true" HR_Insert="true" Hypertext_Translatable="false" Hyph="false" IE_Insert="true" Insert_indexies_sorting="false" Target_language="en-us" TextInset_Translatable="true" Untranslatable_format="Untranslatable"/>
+     </lp:settings>
+ </lp:filter>
+
+ <lp:filter name="ML" version="1.0">
+    <lp:profiles id="0" xmlns:lp="http://www.lionbridge.com/logoport/2005">  
+      <lp:profile default="false" description="Use automatic selection rules." id="0" name="auto-select" root_element="">    
+        <lp:settings remove-whitespace-between-tags="false" remove-whitespace-inside-attributes="false" treat-nbsp-plain="false">
+          <lp:entities>      </lp:entities>      
+          <lp:javascript analyze="true" translate-function-strings="true" translate-non-function-strings="false">        
+            <lp:script name="script" translate="true"/>        
+            <lp:script name="java" translate="true"/>        
+            <lp:script name="server" translate="true"/>      
+      </lp:javascript>    
+    </lp:settings>    
+        <lp:rules>      
+          <lp:rule enabled="true" translate="true" type="external" xpath="descendant::*"/>      
+          <lp:rule enabled="true" translate="false" xpath="descendant::*/@*"/>    
+    </lp:rules>  
+  </lp:profile>  
+  
+      
+      
+      <lp:profile convert_html_cdata="true" default="true" description="Predefined HTML Settings" id="1" name="HTML4" root_element="HTML" use_namespaces="true">
+        <lp:settings remove-whitespace-between-attributes="false" remove-whitespace-between-tags="true" remove-whitespace-inside-attributes="false" treat-nbsp-plain="false">
+          <lp:entities>
+            <lp:entity convert="true" name="AElig" value="Æ"/>
+            <lp:entity convert="true" name="Aacute" value="Á"/>
+            <lp:entity convert="true" name="Acirc" value="Â"/>
+            <lp:entity convert="true" name="Agrave" value="À"/>
+            <lp:entity convert="true" name="Aring" value="Å"/>
+            <lp:entity convert="true" name="Atilde" value="Ã"/>
+            <lp:entity convert="true" name="Auml" value="Ä"/>
+            <lp:entity convert="true" name="Ccedil" value="Ç"/>
+            <lp:entity convert="true" name="Dagger" value="‡"/>
+            <lp:entity convert="true" name="ETH" value="Ð"/>
+            <lp:entity convert="true" name="Eacute" value="É"/>
+            <lp:entity convert="true" name="Ecirc" value="Ê"/>
+            <lp:entity convert="true" name="Egrave" value="È"/>
+            <lp:entity convert="true" name="Euml" value="Ë"/>
+            <lp:entity convert="true" name="Iacute" value="Í"/>
+            <lp:entity convert="true" name="Icirc" value="Î"/>
+            <lp:entity convert="true" name="Igrave" value="Ì"/>
+            <lp:entity convert="true" name="Iuml" value="Ï"/>
+            <lp:entity convert="true" name="Ntilde" value="Ñ"/>
+            <lp:entity convert="true" name="OElig" value="Œ"/>
+            <lp:entity convert="true" name="Oacute" value="Ó"/>
+            <lp:entity convert="true" name="Ocirc" value="Ô"/>
+            <lp:entity convert="true" name="Ograve" value="Ò"/>
+            <lp:entity convert="true" name="Oslash" value="Ø"/>
+            <lp:entity convert="true" name="Otilde" value="Õ"/>
+            <lp:entity convert="true" name="Ouml" value="Ö"/>
+            <lp:entity convert="true" name="Scaron" value="Š"/>
+            <lp:entity convert="true" name="THORN" value="Þ"/>
+            <lp:entity convert="true" name="Uacute" value="Ú"/>
+            <lp:entity convert="true" name="Ucirc" value="Û"/>
+            <lp:entity convert="true" name="Ugrave" value="Ù"/>
+            <lp:entity convert="true" name="Uuml" value="Ü"/>
+            <lp:entity convert="true" name="Yacute" value="Ý"/>
+            <lp:entity convert="true" name="Yuml" value="Ÿ"/>
+            <lp:entity convert="true" name="aacute" value="á"/>
+            <lp:entity convert="true" name="acirc" value="â"/>
+            <lp:entity convert="true" name="acute" value="´"/>
+            <lp:entity convert="true" name="aelig" value="æ"/>
+            <lp:entity convert="true" name="agrave" value="à"/>
+            <lp:entity convert="true" name="amp" value="&amp;"/>
+            <lp:entity convert="true" name="apos" value="'"/>
+            <lp:entity convert="true" name="aring" value="å"/>
+            <lp:entity convert="true" name="atilde" value="ã"/>
+            <lp:entity convert="true" name="auml" value="ä"/>
+            <lp:entity convert="true" name="bdquo" value="„"/>
+            <lp:entity convert="true" name="brvbar" value="¦"/>
+            <lp:entity convert="true" name="ccedil" value="ç"/>
+            <lp:entity convert="true" name="cedil" value="¸"/>
+            <lp:entity convert="true" name="cent" value="¢"/>
+            <lp:entity convert="true" name="circ" value="^"/>
+            <lp:entity convert="true" name="copy" value="©"/>
+            <lp:entity convert="true" name="curren" value="¤"/>
+            <lp:entity convert="true" name="dagger" value="†"/>
+            <lp:entity convert="true" name="deg" value="°"/>
+            <lp:entity convert="true" name="divide" value="÷"/>
+            <lp:entity convert="true" name="eacute" value="é"/>
+            <lp:entity convert="true" name="ecirc" value="ê"/>
+            <lp:entity convert="true" name="egrave" value="è"/>
+            <lp:entity convert="true" name="emsp" value=" "/>
+            <lp:entity convert="true" name="ensp" value=" "/>
+            <lp:entity convert="true" name="eth" value="ð"/>
+            <lp:entity convert="true" name="euml" value="ë"/>
+            <lp:entity convert="true" name="euro" value="€"/>
+            <lp:entity convert="true" name="frac12" value="½"/>
+            <lp:entity convert="true" name="frac14" value="¼"/>
+            <lp:entity convert="true" name="frac34" value="¾"/>
+            <lp:entity convert="true" name="gt" value=">"/>
+            <lp:entity convert="true" name="iacute" value="í"/>
+            <lp:entity convert="true" name="icirc" value="î"/>
+            <lp:entity convert="true" name="iexcl" value="¡"/>
+            <lp:entity convert="true" name="igrave" value="ì"/>
+            <lp:entity convert="true" name="iquest" value="¿"/>
+            <lp:entity convert="true" name="iuml" value="ï"/>
+            <lp:entity convert="true" name="laquo" value="«"/>
+            <lp:entity convert="true" name="ldquo" value="“"/>
+            <lp:entity convert="true" name="lrm" value="‎"/>
+            <lp:entity convert="true" name="lsaquo" value="‹"/>
+            <lp:entity convert="true" name="lsquo" value="‘"/>
+            <lp:entity convert="true" name="lt" value="&lt;"/>
+            <lp:entity convert="true" name="macr" value="¯"/>
+            <lp:entity convert="true" name="mdash" value="—"/>
+            <lp:entity convert="true" name="micro" value="µ"/>
+            <lp:entity convert="true" name="middot" value="·"/>
+            <lp:entity convert="true" name="nbsp" value=" "/>
+            <lp:entity convert="true" name="ndash" value="–"/>
+            <lp:entity convert="true" name="not" value="¬"/>
+            <lp:entity convert="true" name="ntilde" value="ñ"/>
+            <lp:entity convert="true" name="oacute" value="ó"/>
+            <lp:entity convert="true" name="ocirc" value="ô"/>
+            <lp:entity convert="true" name="oelig" value="œ"/>
+            <lp:entity convert="true" name="ograve" value="ò"/>
+            <lp:entity convert="true" name="ordf" value="ª"/>
+            <lp:entity convert="true" name="ordm" value="º"/>
+            <lp:entity convert="true" name="oslash" value="ø"/>
+            <lp:entity convert="true" name="otilde" value="õ"/>
+            <lp:entity convert="true" name="ouml" value="ö"/>
+            <lp:entity convert="true" name="para" value="¶"/>
+            <lp:entity convert="true" name="permil" value="‰"/>
+            <lp:entity convert="true" name="plusmn" value="±"/>
+            <lp:entity convert="true" name="pound" value="£"/>
+            <lp:entity convert="true" name="quot" value="&quot;"/>
+            <lp:entity convert="true" name="raquo" value="»"/>
+            <lp:entity convert="true" name="rdquo" value="”"/>
+            <lp:entity convert="true" name="reg" value="®"/>
+            <lp:entity convert="true" name="rlm" value="‏"/>
+            <lp:entity convert="true" name="rsaquo" value="›"/>
+            <lp:entity convert="true" name="rsquo" value="’"/>
+            <lp:entity convert="true" name="sbquo" value="‚"/>
+            <lp:entity convert="true" name="scaron" value="š"/>
+            <lp:entity convert="true" name="sect" value="§"/>
+            <lp:entity convert="true" name="shy" value="­"/>
+            <lp:entity convert="true" name="sup1" value="¹"/>
+            <lp:entity convert="true" name="sup2" value="²"/>
+            <lp:entity convert="true" name="sup3" value="³"/>
+            <lp:entity convert="true" name="szlig" value="ß"/>
+            <lp:entity convert="true" name="thinsp" value=" "/>
+            <lp:entity convert="true" name="thorn" value="þ"/>
+            <lp:entity convert="true" name="tilde" value="˜"/>
+            <lp:entity convert="true" name="times" value="×"/>
+            <lp:entity convert="true" name="uacute" value="ú"/>
+            <lp:entity convert="true" name="ucirc" value="û"/>
+            <lp:entity convert="true" name="ugrave" value="ù"/>
+            <lp:entity convert="true" name="uml" value="¨"/>
+            <lp:entity convert="true" name="uuml" value="ü"/>
+            <lp:entity convert="true" name="yacute" value="ý"/>
+            <lp:entity convert="true" name="yen" value="¥"/>
+            <lp:entity convert="true" name="yuml" value="ÿ"/>
+            <lp:entity convert="true" name="zwj" value="‍"/>
+            <lp:entity convert="true" name="zwnj" value="‌"/>
+          </lp:entities>
+          <lp:javascript analyze="false" translate-function-strings="true" translate-non-function-strings="false">
+            <lp:script name="script" translate="true"/>
+            <lp:script name="java" translate="true"/>
+            <lp:script name="server" translate="true"/>
+            <lp:function name="alert" script="script" translate="true"/>
+            <lp:function name="write" script="script" translate="true"/>
+            <lp:function name="confirm" script="script" translate="true"/>
+            <lp:function name="prompt" script="script" translate="true"/>
+            <lp:function name="textpopup" script="script" translate="true"/>
+            <lp:function name="writeln" script="script" translate="true"/>
+          </lp:javascript>
+        </lp:settings>
+        <lp:rules>
+          <lp:rule enabled="true" translate="false" type="external" xpath="descendant::STYLE/descendant-or-self::*"/>
+          <lp:rule enabled="true" translate="false" type="external" xpath="descendant::SCRIPT/descendant-or-self::*"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::a"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::abbr"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::acronym"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::b"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::big"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::br"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::cite"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::code"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::del"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::dfn"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::em"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::font"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::i"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::iframe"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::img"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::ins"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::kbd"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::s"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::samp"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::small"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::span"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::strike"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::strong"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::sub"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::sup"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::tt"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::u"/>
+          <lp:rule enabled="true" translate="true" type="internal" xpath="descendant::var"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::KBD/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::MAP/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::DD/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::LABEL/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::TD/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::TEXTAREA/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::PRE/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::TFOOT/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::BODY/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::LI/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::TH/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::CITE/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::DL/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::TABLE/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::VAR/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::FIELDSET/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::OPTION/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::SMALL/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::DT/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::TR/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::BDO/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::CODE/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::TT/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::CENTER/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::SAMP/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::OPTGROUP/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::STRIKE/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::STYLE/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::EM/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::UL/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::ISINDEX/@prompt"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::ISINDEX/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::SELECT/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::DEL/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::FONT/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::ABBR/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::IMG/@alt"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::IMG/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::H1/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::H2/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::H3/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::H4/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::H5/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::H6/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::NOSCRIPT/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::DFN/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::A/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::B/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::SUB/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::OL/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::I/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::INPUT/@value"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::INPUT/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::THEAD/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::COL/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::INS/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::P/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::Q/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::COLGROUP/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::SUP/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::NOFRAMES/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::S/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::U/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::LINK/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::HR/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::OBJECT/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::STRONG/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::TBODY/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::BIG/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::LEGEND/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::FORM/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::ADDRESS/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::CAPTION/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::BLOCKQUOTE/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::ACRONYM/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::AREA/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::DIR/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::IFRAME/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::DIV/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::BR/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::SPAN/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::PARAM/@value"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::MENU/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::APPLET/@alt"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::APPLET/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::BUTTON/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::XMP/@title"/>
+          <lp:rule enabled="true" translate="true" xpath="descendant::LISTING/@title"/>
+          <lp:rule enabled="true" translate="true" type="external" xpath="descendant::*"/>
+          <lp:rule enabled="true" translate="false" type="internal" xpath="descendant::*/@*"/>
+        </lp:rules>
+        <lp:disabled-rules>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::KBD/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::MAP/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::DD/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::LABEL/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::TD/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::TEXTAREA/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::PRE/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::TFOOT/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::BODY/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::LI/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::TH/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::CITE/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::DL/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::TABLE/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::VAR/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::FIELDSET/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::OPTION/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::SMALL/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::DT/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::TR/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::BDO/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::CODE/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::TT/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::CENTER/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::SAMP/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::OPTGROUP/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::STRIKE/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::EM/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::UL/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::ISINDEX/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::SELECT/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::DEL/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::FONT/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::ABBR/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::IMG/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::H1/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::H2/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::H3/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::H4/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::H5/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::H6/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::NOSCRIPT/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::DFN/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::A/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::B/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::SUB/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::OL/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::I/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::INPUT/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::THEAD/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::COL/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::INS/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::P/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::Q/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::COLGROUP/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::SUP/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::NOFRAMES/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::S/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::U/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::LINK/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::HR/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::OBJECT/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::STRONG/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::TBODY/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::BIG/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::LEGEND/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::FORM/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::ADDRESS/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::CAPTION/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::BLOCKQUOTE/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::ACRONYM/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::AREA/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::DIR/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::IFRAME/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::DIV/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::BR/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::SPAN/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::PARAM/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::MENU/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::APPLET/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::BUTTON/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::XMP/descendant-or-self::*"/>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::LISTING/descendant-or-self::*"/>
+        </lp:disabled-rules>
+      </lp:profile>
+      <lp:profile convert_html_cdata="false" default="false" description="ResX resource files" id="3" name="ResX" root_element="root" use_namespaces="false">
+        <lp:settings remove-whitespace-between-tags="true" remove-whitespace-inside-attributes="false" treat-nbsp-plain="false">
+          <lp:entities>
+            <lp:entity convert="true" name="amp" value="&amp;"/>
+            <lp:entity convert="true" name="apos" value="'"/>
+            <lp:entity convert="true" name="gt" value=">"/>
+            <lp:entity convert="true" name="lt" value="&lt;"/>
+            <lp:entity convert="true" name="quot" value="&quot;"/>
+      </lp:entities>
+          <lp:javascript analyze="true" translate-function-strings="true" translate-non-function-strings="false">
+            <lp:script name="script" translate="true"/>
+            <lp:script name="java" translate="true"/>
+            <lp:script name="server" translate="true"/>
+            <lp:function name="alert" script="script" translate="true"/>
+            <lp:function name="write" script="script" translate="true"/>
+      </lp:javascript>
+    </lp:settings>
+        <lp:rules>
+          <lp:rule enabled="true" translate="false" type="external" xpath="descendant::xsd:schema/descendant-or-self::*"/>
+          <lp:rule enabled="true" translate="false" type="external" xpath="descendant::resheader/descendant-or-self::*"/>
+          <lp:rule enabled="true" translate="false" type="external" xpath="/root/data/comment/descendant-or-self::*"/>
+          <lp:rule enabled="true" translate="true" type="external" xpath="descendant::*"/>
+          <lp:rule enabled="true" translate="false" type="external" xpath="descendant::*/@*"/>
+    </lp:rules>
+        <lp:disabled-rules>
+          <lp:rule enabled="false" translate="true" type="external" xpath="descendant::root"/>
+    </lp:disabled-rules>
+  </lp:profile>    
+      <lp:profile convert_html_cdata="false" default="false" description="HTML Help filter" id="2" name="HHK-HHC" root_element="HTML" use_namespaces="true">
+        <lp:settings remove-whitespace-between-tags="false" remove-whitespace-inside-attributes="false" treat-nbsp-plain="false">
+          <lp:entities>
+            <lp:entity convert="true" name="AElig" value="Æ"/>
+            <lp:entity convert="true" name="Aacute" value="Á"/>
+            <lp:entity convert="true" name="Acirc" value="Â"/>
+            <lp:entity convert="true" name="Agrave" value="À"/>
+            <lp:entity convert="true" name="Aring" value="Å"/>
+            <lp:entity convert="true" name="Atilde" value="Ã"/>
+            <lp:entity convert="true" name="Auml" value="Ä"/>
+            <lp:entity convert="true" name="Ccedil" value="Ç"/>
+            <lp:entity convert="true" name="ETH" value="Ð"/>
+            <lp:entity convert="true" name="Eacute" value="É"/>
+            <lp:entity convert="true" name="Ecirc" value="Ê"/>
+            <lp:entity convert="true" name="Egrave" value="È"/>
+            <lp:entity convert="true" name="Euml" value="Ë"/>
+            <lp:entity convert="true" name="Iacute" value="Í"/>
+            <lp:entity convert="true" name="Icirc" value="Î"/>
+            <lp:entity convert="true" name="Igrave" value="Ì"/>
+            <lp:entity convert="true" name="Iuml" value="Ï"/>
+            <lp:entity convert="true" name="Ntilde" value="Ñ"/>
+            <lp:entity convert="true" name="Oacute" value="Ó"/>
+            <lp:entity convert="true" name="Ocirc" value="Ô"/>
+            <lp:entity convert="true" name="Ograve" value="Ò"/>
+            <lp:entity convert="true" name="Oslash" value="Ø"/>
+            <lp:entity convert="true" name="Otilde" value="Õ"/>
+            <lp:entity convert="true" name="Ouml" value="Ö"/>
+            <lp:entity convert="true" name="THORN" value="Þ"/>
+            <lp:entity convert="true" name="Uacute" value="Ú"/>
+            <lp:entity convert="true" name="Ucirc" value="Û"/>
+            <lp:entity convert="true" name="Ugrave" value="Ù"/>
+            <lp:entity convert="true" name="Uuml" value="Ü"/>
+            <lp:entity convert="true" name="Yacute" value="Ý"/>
+            <lp:entity convert="true" name="aacute" value="á"/>
+            <lp:entity convert="true" name="acirc" value="â"/>
+            <lp:entity convert="true" name="acute" value="´"/>
+            <lp:entity convert="true" name="aelig" value="æ"/>
+            <lp:entity convert="true" name="agrave" value="à"/>
+            <lp:entity convert="true" name="amp" value="&amp;"/>
+            <lp:entity convert="true" name="apos" value="'"/>
+            <lp:entity convert="true" name="aring" value="å"/>
+            <lp:entity convert="true" name="atilde" value="ã"/>
+            <lp:entity convert="true" name="auml" value="ä"/>
+            <lp:entity convert="true" name="brvbar" value="¦"/>
+            <lp:entity convert="true" name="ccedil" value="ç"/>
+            <lp:entity convert="true" name="cedil" value="¸"/>
+            <lp:entity convert="true" name="cent" value="¢"/>
+            <lp:entity convert="true" name="copy" value="©"/>
+            <lp:entity convert="true" name="curren" value="¤"/>
+            <lp:entity convert="true" name="deg" value="°"/>
+            <lp:entity convert="true" name="divide" value="÷"/>
+            <lp:entity convert="true" name="eacute" value="é"/>
+            <lp:entity convert="true" name="ecirc" value="ê"/>
+            <lp:entity convert="true" name="egrave" value="è"/>
+            <lp:entity convert="true" name="eth" value="ð"/>
+            <lp:entity convert="true" name="euml" value="ë"/>
+            <lp:entity convert="true" name="frac12" value="½"/>
+            <lp:entity convert="true" name="frac14" value="¼"/>
+            <lp:entity convert="true" name="frac34" value="¾"/>
+            <lp:entity convert="true" name="gt" value=">"/>
+            <lp:entity convert="true" name="iacute" value="í"/>
+            <lp:entity convert="true" name="icirc" value="î"/>
+            <lp:entity convert="true" name="iexcl" value="¡"/>
+            <lp:entity convert="true" name="igrave" value="ì"/>
+            <lp:entity convert="true" name="iquest" value="¿"/>
+            <lp:entity convert="true" name="iuml" value="ï"/>
+            <lp:entity convert="true" name="laquo" value="«"/>
+            <lp:entity convert="true" name="lt" value="&lt;"/>
+            <lp:entity convert="true" name="macr" value="¯"/>
+            <lp:entity convert="true" name="micro" value="µ"/>
+            <lp:entity convert="true" name="middot" value="·"/>
+            <lp:entity convert="true" name="nbsp" value=" "/>
+            <lp:entity convert="true" name="not" value="¬"/>
+            <lp:entity convert="true" name="ntilde" value="ñ"/>
+            <lp:entity convert="true" name="oacute" value="ó"/>
+            <lp:entity convert="true" name="ocirc" value="ô"/>
+            <lp:entity convert="true" name="ograve" value="ò"/>
+            <lp:entity convert="true" name="ordf" value="ª"/>
+            <lp:entity convert="true" name="ordm" value="º"/>
+            <lp:entity convert="true" name="oslash" value="ø"/>
+            <lp:entity convert="true" name="otilde" value="õ"/>
+            <lp:entity convert="true" name="ouml" value="ö"/>
+            <lp:entity convert="true" name="para" value="¶"/>
+            <lp:entity convert="true" name="plusmn" value="±"/>
+            <lp:entity convert="true" name="pound" value="£"/>
+            <lp:entity convert="true" name="quot" value="&quot;"/>
+            <lp:entity convert="true" name="raquo" value="»"/>
+            <lp:entity convert="true" name="reg" value="®"/>
+            <lp:entity convert="true" name="sect" value="§"/>
+            <lp:entity convert="true" name="shy" value="­"/>
+            <lp:entity convert="true" name="sup1" value="¹"/>
+            <lp:entity convert="true" name="sup2" value="²"/>
+            <lp:entity convert="true" name="sup3" value="³"/>
+            <lp:entity convert="true" name="szlig" value="ß"/>
+            <lp:entity convert="true" name="thorn" value="þ"/>
+            <lp:entity convert="true" name="times" value="×"/>
+            <lp:entity convert="true" name="uacute" value="ú"/>
+            <lp:entity convert="true" name="ucirc" value="û"/>
+            <lp:entity convert="true" name="ugrave" value="ù"/>
+            <lp:entity convert="true" name="uml" value="¨"/>
+            <lp:entity convert="true" name="uuml" value="ü"/>
+            <lp:entity convert="true" name="yacute" value="ý"/>
+            <lp:entity convert="true" name="yen" value="¥"/>
+            <lp:entity convert="true" name="yuml" value="ÿ"/>
+      </lp:entities>
+          <lp:javascript analyze="true" translate-function-strings="true" translate-non-function-strings="false">
+            <lp:script name="script" translate="true"/>
+            <lp:script name="java" translate="true"/>
+            <lp:script name="server" translate="true"/>
+      </lp:javascript>
+    </lp:settings>
+        <lp:rules>
+          <lp:rule enabled="true" translate="true" type="external" xpath="descendant::param[@name=&quot;Name&quot;]/@value"/>
+          <lp:rule enabled="true" translate="true" type="external" xpath="descendant::PARAM[@name=&quot;Name&quot;]/@value"/>
+          <lp:rule enabled="true" translate="true" type="external" xpath="descendant::*"/>
+          <lp:rule enabled="true" translate="false" xpath="descendant::*/@*"/>
+    </lp:rules>
+        <lp:disabled-rules/>
+  </lp:profile></lp:profiles>
+  </lp:filter>
+ <lp:filter name="PPTX" version="1.0">
+    <lp:settings comment="false" diagrams="true" extractSlides="true" extract_alternative_text="true" extract_strikethrough_text="true" hiddenSlides="true" includeSource="false" insert_paragraph_mark_after_break="true" insert_paragraph_mark_after_soft_break="false" notesSlides="true" set_break_as_external="false" slideLayouts="true" slideMasters="true"/>
+ </lp:filter>
+ <lp:filter name="XLSX" version="1.0">
+    <lp:settings cell_sort_by_column="false" extract_alternative_text="true" extract_comments="false" extract_hidden_sheets="false" extract_sheet_names="true" includeSource="false" insert_paragraph_mark_after_break="true" none_translatable_ranges="" set_break_as_external="false" translate_hidden_text="false"/>
+ </lp:filter>
+ <lp:filter name="IDML" version="1.0">
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+<!--
+        BreakExternal - Break tag (<br>) is set in LogoportDoNotTranslate style, so is considered as end of segment markers
+        CleanCharacterFormatting - first character style moves to <p> (decreases the number of internal tags inside the segment)
+        ExtractDiscretionaryHyphen - Extract discretionary hyphen
+        ExtractDiscretionaryLineBreak - Extract discretionary line break
+        ExtractHiddenConditions - Extract text from hidden conditional text
+        ExtractHiddenLayers - Extract text from hidden layers
+        ExtractMasterPage   - Extract text from Master pages
+        ExtractNotes        - Extract notes
+        PdfPreviewCustID    - iBrams customer ID for iBrams-produced PDF preview
+        PdfPreviewInDesignCustID - (temporary) access code for InDesign-produced PDF preview
+        PreviewType         - Specify preview format and means of producing it
+        deleteTempXml - Delete temporaly created *.idml.xml file
+        includeSource       - Include original file as source.idml in .xlz (required for PDF previews)
+    -->
+    <lp:settings BreakExternal="false" CleanCharacterFormatting="true" ExtractDiscretionaryHyphen="false" ExtractDiscretionaryLineBreak="false" ExtractHiddenConditions="false" ExtractHiddenLayers="false" ExtractMasterPage="true" ExtractNotes="true" PdfPreviewCustID="" PdfPreviewInDesignCustID="" PreviewType="PreviewAsIdml" deleteTempXml="true" includeSource="true"/>
+ </lp:filter>
+ <lp:filter name="Text" version="1.0">
+   
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!-- Default dotall="false" (means '.' refers to any character except \n), multiline="false" -->
+	  <lp:profiles id="2">
+	    <lp:profile default="false" description="Use automatic selection rules." ext="" id="0" name="auto-select">
+		      <lp:settings defaultstyle="normal" encoding="windows-1252"/>
+		      <lp:rules/>      
+	    </lp:profile>   
+	    <lp:profile default="true" description="Parsing of Text files." ext="txt" id="1" name="plain text">
+        <lp:settings defaultstyle="normal" encoding="windows-1252"/>
+        <lp:rules/>
+        <lp:disabled-rules/>
+      </lp:profile>   
+	    <lp:profile default="false" description="Parsing of Properties files." ext="properties" id="2" name="Properties files">
+        <lp:settings defaultstyle="normal" encoding="ISO-8859-2" removeextracrext="false" removeextracrint="false" removeextraspacesext="false" removeextraspacesint="false" removeextratabext="false" removeextratabint="false"/>
+        <lp:rules>
+          <!--   single line comments  #comment /n  -->
+          <lp:rule dotall="false" enabled="true" multiline="true" regexp1="^(#).*" style="external" type="block"/>
+          <lp:rule dotall="false" enabled="true" multiline="true" regexp1="^.[^=\n]+=" style="external" type="block"/>
+          <lp:rule enabled="true" regexp1="\{\d.*?\}" style="internal" type="block"/>
+          <!-- StringsName=       -->
+          <!--   inline elements....{0}...  -->
+        </lp:rules>
+        <lp:disabled-rules/>
+      </lp:profile>
+	    <lp:profile default="false" description="Parsing of INI files." ext="ini" id="3" name="INI files">
+        <lp:settings defaultstyle="external" encoding="windows-1252"/>
+        <lp:rules>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+<!--   single line comments  ;any char except /n  -->
+          <lp:rule enabled="true" multiline="true" regexp1=";.*$" style="external" type="block"/>
+          <lp:rule dotall="false" enabled="true" multiline="true" regexp1="^.*=$" regexp2="" style="external" type="block"/>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+<!-- StringsName=       -->
+          <lp:rule dotall="false" enabled="true" multiline="true" regexp1="^\s*[^=]*\s*=\s*" regexp2="$" style="normal" type="delimiter"/>
+        </lp:rules>
+        <lp:disabled-rules/>
+      </lp:profile>   
+	    <lp:profile default="false" description="Parsing of H files." ext="h,m,c,cpp,hpp,cxx" id="4" name="H files">
+		      <lp:settings defaultstyle="external" encoding="windows-1252"/>     
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  
+      
+  <!-- Default dotall="false" (means '.' refers to any character except \n),  multiline ="false" -->
+		      <lp:rules>
+        
+  
+        
+  
+        
+  
+        
+  
+        
+  
+        
+  
+        
+  
+        
+  <!-- multiline comments /*        */    -->
+		        <lp:rule dotall="true" enabled="true" multiline="true" regexp1="/\*.*?\*/" style="external" type="block"/>
+        
+  
+        
+  
+        
+  
+        
+  
+        
+  
+        
+  
+        
+  
+        
+  <!--   single line comments  //any char except /n  -->
+		        <lp:rule enabled="true" multiline="true" regexp1="//.*$" style="external" type="block"/>
+	
+        
+  
+        
+  
+        
+  
+        
+  
+        
+  
+        
+  
+        
+  
+        <!-- Strings in beetween " "      -->
+		        <lp:rule dotall="true" enabled="true" multiline="true" regexp1="\&quot;" regexp2="\&quot;" style="normal" type="delimiter">      
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  
+          
+  <!--   inline elements.......  -->
+			        <lp:rule enabled="true" regexp1="(%(([-0+#]?)[-0+#]?)((\d\$)?)(([\d\*]*)(\.[\d\*]*)?)[dioxXucsfeEgGpn]) |(\\r\\n)|\\a|\\b|\\f|\\n|\\r|\\t|\\v" style="internal" type="block"/>
+		        </lp:rule>
+		      </lp:rules> 
+	    </lp:profile>
+    </lp:profiles>
+ </lp:filter>
+  <lp:filter name="INX" version="1.0">
+    <lp:settings/>
+  </lp:filter>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</lp:Filters>
