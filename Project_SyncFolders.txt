@@ -1,0 +1,5 @@
+CDM\UI;cdm-outlook-addin;*.resjson;master
+OOB\UI;HCM;*.label.txt;master
+D365App\UI;mobile-app;*.json;master
+AX\7.x_OfficeApps\UI;OfficeApps;*.resjson;master
+D365Shell\UI;Dynamics365-Dynamics365-Portal;*.resx;master
