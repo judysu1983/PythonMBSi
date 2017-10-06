@@ -117,27 +117,4 @@ def sd2gitNoEnUS4OfficeApp(Master,Component,EOLfile):
                 if not os.path.exists(targetfile):
                     shutil.copy2(sdfile,targetfile)
                     
-########Taleng Engagement files#
-sd2gitNoEnUS4TalentEngagement(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','Dynamics365-HCM-MsAssessClient',r'C:\Depots\MBSI\Projects\OOB\UI\TalentEngagement.eol')
-sd2gitNoEnUS4TalentEngagement(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','Dynamics365-HCM-TalentEngagement',r'C:\Depots\MBSI\Projects\OOB\UI\TalentEngagement.eol')
-sd2gitNoEnUS4TalentEngagement(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','Dynamics365-HCM-OnboardingClient',r'C:\Depots\MBSI\Projects\OOB\UI\TalentEngagement.eol')
-sd2gitNoEnUS4TalentEngagement(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','Dynamics365-HCM-AppsPortalClient',r'C:\Depots\MBSI\Projects\OOB\UI\TalentEngagement.eol')
-sd2gitNoEnUS4TalentEngagement(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','Dynamics365-HCM-OfferManagement',r'C:\Depots\MBSI\Projects\OOB\UI\TalentEngagement.eol')
-#########HCM files##############
-sd2git(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','HCMApp',r'C:\Depots\MBSI\Projects\OOB\UI\OOBApps.eol')
-
-#########CDM files##############
-sd2git(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','PowerApps-CDM-Entities',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UITest.eol')
-##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','cdm-outlook-addin',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UITest.eol')
-##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','client-control-lib',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UITest.eol')
-##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Metadata',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UITest.eol')
-##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Connector',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UITest.eol')
-##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Discovery',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UITest.eol')
-
-########AX7.x_OfficeApps files##########
 sd2gitNoEnUS4OfficeApp(r'C:\Depots\MBSI\Projects\AX\7.x_OfficeApps\UI\Master\OfficeApps\Source','AX7.x_OfficeApps',r'C:\Depots\MBSI\Projects\AX\7.x_OfficeApps\UI\AX7.x_OfficeApp_UI.eol')

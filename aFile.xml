@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<EOL>
+   <Component name="client-control-lib" contentType="UI" sourceCulture="en-US" package="[package.template]" noType="LabelTxtFromSD">
+      <Var name="ComponentFolder">client-control-lib</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[lg.1]</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="en-US">en-AU;en-CA;en-GB;en-IE;en-IN;en-MY;en-NZ;en-SG;en-ZA</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="es">es-MX</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="it">it-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="nl">nl-BE</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="fr">fr-BE;fr-CA;fr-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="de">de-CH;de-AT</LocExtent>
+        <File name="en.json" parser="[parser.resjson]">
+          <Var name="File.SourceBinary">[git_CDM]\client-control-lib\src\Localization\Messages</Var>
+          <Var name="File.BaseName">[targetCulture]</Var>
+          <Var name="File.ExtensionName">json</Var>
+          <Var name="File.GenerateStructureBasedOnFileType">client-control-lib\src\Localization\Messages</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+
+    <Component name="PowerApps-CDM-Entities" package="[package.PowerApps-CDM-Entities]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">PowerApps-CDM-Entities</Var>
+      <Var name="File.GenerateStructureBasedOnFileType">[ComponentFolder]\[File.TargetLclLocation]\[targetCulture]\[File.BaseName].[targetCulture].[File.ExtensionName]</Var>
+      <ItemGroup type="LabelTxt">
+        <LocExtent derivation="Translate">[lg.1]</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="en-US">en-AU;en-CA;en-GB;en-IE;en-IN;en-MY;en-NZ;en-SG;en-ZA</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="es">es-MX</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="it">it-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="nl">nl-BE</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="fr">fr-BE;fr-CA;fr-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="de">de-CH;de-AT</LocExtent>
+        <File name="CustomerService.en-us.label.txt" parser="[parser.Txt]">
+          <Var name="File.SourceBinary">[git_CDM]\PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">CustomerService</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Foundation.en-us.label.txt" parser="[parser.Txt]">
+          <Var name="File.SourceBinary">[git_CDM]\PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Foundation</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Group.en-us.label.txt" parser="[parser.Txt]">
+          <Var name="File.SourceBinary">[git_CDM]\PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Group</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Organization.en-us.label.txt" parser="[parser.Txt]">
+          <Var name="File.SourceBinary">[git_CDM]\PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Organization</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Person.en-us.label.txt" parser="[parser.Txt]">        
+          <Var name="File.SourceBinary">[git_CDM]\PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Person</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Purchase.en-us.label.txt" parser="[parser.Txt]">         
+          <Var name="File.SourceBinary">[git_CDM]\PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Purchase</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Sales.en-us.label.txt" parser="[parser.Txt]">          
+          <Var name="File.SourceBinary">[git_CDM]\PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Sales</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources</Var>
+        </File>
+
+         <File name="Productivity.en-US.label.txt" parser="[parser.Txt]">          
+          <Var name="File.SourceBinary">[git_CDM]\PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Productivity</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources</Var>
+        </File>
+         <File name="HumanResources.en-us.label.txt" parser="[parser.Txt]">          
+          <Var name="File.SourceBinary">[git_CDM]\PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">HumanResources</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources</Var>
+        </File>
+        <!--<File name="SurveySecurity.en-us.label.txt" parser="[parser.Txt]">
+          <Var name="File.SourceBinary">[git_CDM]\PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">SurveySecurity</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">PowerApps-CDM-Entities\source\metadata\PowerApps\PowerApps\AxLabelFile\LabelResources</Var>
+        </File>-->
+      </ItemGroup>
+    </Component>
+</EOL>

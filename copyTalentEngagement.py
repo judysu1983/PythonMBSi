@@ -13,8 +13,8 @@ os.makedirs(GitPath)
 
 langs=["bg", "ca-ES", "cs", "da", "de", "de-AT", "de-CH", "el", "en-AU", "en-CA", "en-GB", "en-IE", "en-IN", "en-MY", "en-NZ", "en-SG", "en-ZA", "es", "es-MX", "et", "eu", "fi", "fr", "fr-BE", "fr-CA", "fr-CH", "gl", "hi", "hr-HR", "hu", "id", "is", "it", "it-CH", "ja", "kk", "ko", "lt", "lv", "ms-MY", "nb-NO", "nl", "nl-BE", "pl", "pt-BR", "pt-PT", "ro", "ru", "sk", "sl", "sr-Cyrl-RS", "sr-Latn-RS", "sv", "th", "tr", "uk", "vi", "zh-Hans", "zh-Hant", "zh-HK"]
 langs2=["bg-BG", "ca-ES", "cs-CZ", "da-DK", "de-DE", "de-AT", "de-CH", "el-GR", "en-AU", "en-CA", "en-GB", "en-IE", "en-IN", "en-MY", "en-NZ", "en-SG", "en-ZA", "es-ES", "es-MX", "et-EE", "eu-ES", "fi-FI", "fr-FR", "fr-BE", "fr-CA", "fr-CH", "gl-ES", "hi-IN", "hr-HR", "hu-HU", "id-ID", "is-is", "it-IT", "it-CH", "ja-JP", "kk-KZ", "ko-KR", "lt-LT", "lv-LV", "ms-MY", "nb-NO", "nl-NL", "nl-BE", "pl-PL", "pt-BR", "pt-PT", "ro-RO", "ru-RU", "sk-SK", "sl-SI", "sr-Cyrl-RS", "sr-Latn-RS", "sv-SE", "th-TH", "tr-TR", "uk-UA", "vi-VN", "zh-Hans-CN", "zh-Hant-TW", "zh-Hant-HK"]
-#components=["Dynamics365-HCM-AppsPortalClient","Dynamics365-HCM-MsAssessClient","Dynamics365-HCM-OnBoardingClient","Dynamics365-HCM-TalentEngagement"]	
-components=["Dynamics365-HCM-OnboardingClient","Dynamics365-HCM-MsAssessClient","Dynamics365-HCM-Offermanagement","Dynamics365-HCM-AppsPortalClient","Dynamics365-HCM-TalentEngagement"]	
+
+components=["Dynamics365-HCM-OnboardingClient","Dynamics365-HCM-MsAssessClient","Dynamics365-HCM-Offermanagement","Dynamics365-HCM-TalentEngagement","Dynamics365-HCM-AppsPortalClient"]	
 def copymessages():
         for lang in langs:
                 for com in components:

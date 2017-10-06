@@ -25,7 +25,7 @@ vsts-npm-auth -config .npmrc
 echo #############copy over udpated files############
 rem copy LCL files for HCM project
 cd C:\Python27 
-python copyTalentEngagement_v2.py
+python copyTalentEngagement_v3.py %%a
 attrib -r %GitRoot%\%%a\localization\*.* /s
 cd "%GitRoot%\%%a"
 rem sync latest strings before creating PR
@@ -34,7 +34,7 @@ npm run localization:extract
 git add .
 git status
 
-pause
+
 git commit -m "Localization Updates"
 git push -u origin v-judysu/loc_%HBdate%
 rem git push -u origin <new-branch-name>

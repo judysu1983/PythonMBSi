@@ -1,0 +1,14 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 9E3D-07D7
+
+ Directory of C:\test\ttt
+
+09/28/2017  11:55 AM    <DIR>          .
+09/28/2017  11:55 AM    <DIR>          ..
+09/28/2017  11:55 AM    <DIR>          Dynamics365-HCM-AppsPortalClient
+09/28/2017  11:55 AM    <DIR>          Dynamics365-HCM-MsAssessClient
+09/28/2017  11:55 AM    <DIR>          Dynamics365-HCM-Offermanagement
+09/28/2017  11:55 AM    <DIR>          Dynamics365-HCM-OnboardingClient
+09/28/2017  11:55 AM    <DIR>          Dynamics365-HCM-TalentEngagement
+               0 File(s)              0 bytes
+               7 Dir(s)  28,823,728,128 bytes free

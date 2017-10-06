@@ -1,0 +1,800 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<Eol>
+  <Project name="[PROJECTNAME]">
+    <!-- define base paths -->
+    <Var name="project" value="[DataRoot]" />
+
+    <!-- not defined yet -->
+    <PathTemplate type="GrabLclFromGitRepos" copy="yes"
+    common="[targetCulture]\[ComponentFolder]\[File].lcl"
+    source="[project]\[common]"
+    work="[ComponentFolder]\[targetCulture]\[File].lcl" />
+
+    <PathTemplate type="PrepLclForGitReposPush" copy="yes"
+        common="[targetCulture]\[ComponentFolder]\[File].lcl"
+        source="[project]\[common]"
+        work="pushMe\[File.TargetLclLocation]\[targetCulture]\[ComponentFolder]\[File].lcl" />
+
+    <PathTemplate type="Target" copy="yes"
+          common="[targetCulture]\[ComponentFolder]\[File].lcl"
+          source="[project]\[common]"
+          work="[common]" />
+    <PathTemplate type="Target.Pivot" copy="yes"
+          common="[targetCulture]\[ComponentFolder]\[File].lcl.xlz"
+          source="[project]\[common]"
+          work="[common]" />
+    <PathTemplate type="Parent" copy="no"
+        common="[parentCulture]\[ComponentFolder]\[File].lcl"
+        source="[project]\[common]"
+        work="[common]" />
+
+
+    <PathTemplate type="Comments" copy="yes"
+        source="[File.SourceLCI]"
+        work="Master\Source\[ComponentFolder]\[File.TargetLCI]" />
+
+    <PathTemplate type="Content" copy="yes"
+				source="[File.SourceLabelTxt]"
+				work="Master\Source\[ComponentFolder]\[File.SourceLabelTxt]" />
+
+    <PathTemplate type="Settings" copy="yes"
+        source="[DataRoot]\[LSS]"
+        work="[LSS]" />
+
+    <PathTemplate type="Binary" copy="yes"
+        common="Master\Source\[ComponentFolder]\[File]"
+        source="[project]\[common]"
+        work="[common]" />
+
+    <PathTemplate type="BuildBinary" copy="yes"
+        source="[File.SourceBinary]\[File]"
+        work="Master\Source\[ComponentFolder]\[File]" />
+
+    <!-- For HCMapp component common="GeneratedPackage\[ComponentFolder]\[File.TargetLclLocation]\[targetCulture]\[File.BaseName].[targetCulture].[File.ExtensionName]" 
+         For HCMFabric common="GeneratedPackage\[File.TargetLclLocation]\[File.BaseName].[targetCulture].[File.ExtensionName]"-->
+    <PathTemplate type="LocalizedBinary" copy="yes"
+        common="GeneratedPackage\[ComponentFolder]\[File.TargetLclLocation]\[targetCulture]\[File.BaseName].[targetCulture].[File.ExtensionName]"
+        source="[project]\[common]"
+        work="[common]" />
+
+    <PathTemplate type="Master" copy="yes"
+        common="Master\SrcLCX\[ComponentFolder]\[file].lcg"
+        source="[project]\[common]"
+        work="[common]" />
+
+    <PathTemplate type="Generated" copy="yes"
+        source="[project]\Master\SrcLCX\[ComponentFolder]\[File].lcg"
+        work="Master\SrcLCX\[ComponentFolder]\[File].lcg" />
+
+    <!-- For HO work on copying LCG from build -->
+    <PathTemplate type="BuildMaster" copy="yes"
+        source="[project]\Master\SrcLCX\[ComponentFolder]\[File].lcg"
+        work="Master\SrcLCX\[ComponentFolder]\[File].lcg" />
+
+    <!-- define variables for friendly parser names -->
+    <Var name="parser.Managed" value="211" />
+    <Var name="parser.ALD"     value="239" />
+    <Var name="parser.KTD"     value="238" />
+    <Var name="parser.Txt"     value="345" />
+    <Var name="parser.Win32"   value="3" />
+    <Var name="parser.INF"     value="7" />
+    <Var name="parser.PSD1"    value="303" />
+    <Var name="parser.HTML"    value="22" />
+    <Var name="parser.XML"     value="210" />
+    <Var name="parser.resjson" value="306" />
+    <!--<Var name="lg.1">ar;he;is;bg;ca-ES;cs;da;de;el;es;et;eu;fi;fr;gl;hi;hr-HR;hu;id;it;ja;kk;ko;lt;lv;ms-MY;nb-NO;nl;pl;pt-BR;pt-PT;ro;ru;sk;sl;sr-Cyrl-RS;sr-Latn-RS;sv;th;tr;uk;vi;zh-Hans;zh-Hant</Var >-->
+    <Var name="MobileApp.41">ar;cs;da;de;es;et;fi;fr;hu;is;it;ja;lt;lv;nb-NO;nl;pl;pt-BR;ru;sv;th;tr;zh-Hans;kk</Var >
+    <Var name="OfficeApp.60">ar;cs;da;de;es;et;fi;fr;hu;is;it;ja;lt;lv;nb-NO;nl;pl;pt-BR;ru;sv;th;tr;zh-Hans;eu;bg;ca-ES;zh-HANT;hr-HR;gl;el;hi;id;kk;ko;ms-MY;pt-PT;ro;sr-Cyrl-RS;sr-Latn-RS;sk;sl;uk;vi</Var >
+    <Var name="WarehouseMobileapp.40">ar;cs;da;de;es;et;fi;fr;hu;is;it;ja;lt;lv;nb-NO;nl;pl;pt-BR;ru;sv;th;tr;zh-Hans</Var >
+    <Var name="HRApp.40">ar;cs;da;de;es;et;fi;fr;hu;is;it;ja;lt;lv;nb-NO;nl;pl;pt-BR;ru;sv;th;tr;zh-Hans</Var >
+    <Var name="ProductGraph.4">ar;de;zh-Hans;en-US</Var >
+    <Var name="TalentEngagement.7">en-US;de;fr;it;es</Var >
+    <Var name="TBD.4">ar;de;zh-Hans;en-US</Var >
+    <Var name="Retail.7">en-US;de;fr;it;es</Var >
+
+    <Var name="package.template" value="[targetCulture]\[targetCulture]_[PROJECTNAMESHORT]_[ComponentFolder].lspkg" />
+
+    <Component name="AX7.x_OfficeApps" contentType="UI" sourceCulture="en-US" package="[package.template]" noType="Comments" >
+      <Var name="ComponentFolder">OfficeApps</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[OfficeApp.60]</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="en-US">en-AU;en-CA;en-GB;en-IE;en-IN;en-MY;en-NZ;en-SG;en-ZA</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="es">es-MX</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="it">it-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="nl">nl-BE</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="fr">fr-BE;fr-CA;fr-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="de">de-CH;de-AT</LocExtent>
+        <File name="DynamicsAppResources.resjson" parser="[parser.resjson]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\OfficeApps\src\Apps\DynamicsAX.AppWeb\Resources</Var>
+          <Var name="File.BaseName">DynamicsAppResources</Var>
+          <Var name="File.ExtensionName">resjson</Var>
+          <Var name="File.TargetLclLocation">OfficeApps\src\Apps\DynamicsAX.AppWeb\Resources</Var>
+        </File>
+        <File name="PowerAppsResources.resjson" parser="[parser.resjson]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\OfficeApps\src\Apps\DynamicsAX.AppWeb\Resources</Var>
+          <Var name="File.BaseName">PowerAppsResources</Var>
+          <Var name="File.ExtensionName">resjson</Var>
+          <Var name="File.TargetLclLocation">OfficeApps\src\Apps\DynamicsAX.AppWeb\Resources</Var>
+        </File>
+        <File name="Resources.resjson" parser="[parser.resjson]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\OfficeApps\src\Apps\DynamicsAX.Outlook\Resources</Var>
+          <Var name="File.BaseName">Resources</Var>
+          <Var name="File.ExtensionName">resjson</Var>
+          <Var name="File.TargetLclLocation">OfficeApps\src\Apps\DynamicsAX.Outlook\Resources</Var>
+        </File>
+        <File name="OfficeAppResources.resjson" parser="[parser.resjson]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\OfficeApps\src\Apps\DynamicsAX.Common\Resources</Var>
+          <Var name="File.BaseName">OfficeAppResources</Var>
+          <Var name="File.ExtensionName">resjson</Var>
+          <Var name="File.TargetLclLocation">OfficeApps\src\Apps\DynamicsAX.Common\Resources</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+    <Component name="mobile-app" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">mobile-app</Var>
+      <Var name="File.GenerateStructureBasedOnFileType">[ComponentFolder]\[File.ExtensionName]</Var>
+      <ItemGroup type="Resjson">
+        <LocExtent derivation="Translate">[MobileApp.41]</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="en-US">en-AU;en-CA;en-GB;en-IE;en-IN;en-MY;en-NZ;en-SG;en-ZA</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="es">es-MX</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="it">it-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="nl">nl-BE</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="fr">fr-BE;fr-CA;fr-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="de">de-CH;de-AT</LocExtent>
+        <File name="en-US.resjson" parser="[parser.resjson]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\mobile-app\src\localization\messages</Var>
+          <Var name="File.BaseName"></Var>
+          <Var name="File.ExtensionName">resjson</Var>
+          <Var name="File.TargetLclLocation">mobile-app\src\localization\messages</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+    <Component name="WarehouseMobileApp" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">WarehouseMobileApp</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[WarehouseMobileapp.40]</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="en-US">en-AU;en-CA;en-GB;en-IE;en-IN;en-MY;en-NZ;en-SG;en-ZA</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="es">es-MX</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="it">it-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="nl">nl-BE</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="fr">fr-BE;fr-CA;fr-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="de">de-CH;de-AT</LocExtent>
+        <File name="AppResources.en-US.resx" parser="[parser.Managed]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\WarehouseMobileApp\WarehouseMobileApp\WarehouseMobileApp\Resources</Var>
+          <Var name="File.BaseName">AppResources</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">WarehouseMobileApp\WarehouseMobileApp\WarehouseMobileApp\Resources</Var>
+        </File>
+        <File name="DemoDataResources.en-US.resx" parser="[parser.Managed]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\WarehouseMobileApp\WarehouseMobileApp.ServiceProxy.Demo\Resources</Var>
+          <Var name="File.BaseName">DemoDataResources</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">WarehouseMobileApp\WarehouseMobileApp.ServiceProxy.Demo\Resources</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+
+ <Component name="HCMFabric" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">HCMApp_HCMFabric\Landing</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[HRApp.40]</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="en-US">en-AU;en-CA;en-GB;en-IE;en-IN;en-MY;en-NZ;en-SG;en-ZA</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="es">es-MX</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="it">it-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="nl">nl-BE</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="fr">fr-BE;fr-CA;fr-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="de">de-CH;de-AT</LocExtent>
+        <File name="EnvironmentAdminController.resx" noType="Comments" parser="[parser.Managed]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCMFabric\Source\HCMLandingClientService\Resources\Controllers</Var>
+          <Var name="File.BaseName">EnvironmentAdminController</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\Source\HCMLandingClientService\Resources\Controllers</Var>
+        </File>
+
+        <File name="_Layout.resx" noType="Comments" parser="[parser.Managed]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCMFabric\Source\HCMLandingClientService\Resources\Views\Shared</Var>
+          <Var name="File.BaseName">_Layout</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\Source\HCMLandingClientService\Resources\Views\Shared</Var>
+        </File>
+        <File name="ComingSoon.resx" noType="Comments" parser="[parser.Managed]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCMFabric\Source\HCMLandingClientService\Resources\Views\Shared</Var>
+          <Var name="File.BaseName">ComingSoon</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\Source\HCMLandingClientService\Resources\Views\Shared</Var>
+        </File>
+        <File name="Error.resx" noType="Comments" parser="[parser.Managed]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCMFabric\Source\HCMLandingClientService\Resources\Views\Shared</Var>
+          <Var name="File.BaseName">Error</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\Source\HCMLandingClientService\Resources\Views\Shared</Var>
+        </File>
+        <File name="SharedResource.resx" noType="Comments" parser="[parser.Managed]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCMFabric\Source\HCMLandingClientService\Resources</Var>
+          <Var name="File.BaseName">SharedResource</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\Source\HCMLandingClientService\Resources</Var>
+        </File>
+
+        <File name="Index.resx" noType="Comments" parser="[parser.Managed]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCMFabric\Source\HCMLandingClientService\Resources\Views\Home</Var>
+          <Var name="File.BaseName">Index</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\Source\HCMLandingClientService\Resources\Views\Home</Var>
+        </File>
+        <File name="Legal.resx" noType="Comments" parser="[parser.Managed]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCMFabric\Source\HCMLandingClientService\Resources\Views\Home</Var>
+          <Var name="File.BaseName">Legal</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\Source\HCMLandingClientService\Resources\Views\Home</Var>
+        </File>
+        <File name="Provisioning.resx" noType="Comments" parser="[parser.Managed]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCMFabric\Source\HCMLandingClientService\Resources\Views\Home</Var>
+          <Var name="File.BaseName">Provisioning</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\Source\HCMLandingClientService\Resources\Views\Home</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+    <Component name="HCMFabric" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">HCMApp_HCMFabric\Marketing</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[HRApp.40]</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="en-US">en-AU;en-CA;en-GB;en-IE;en-IN;en-MY;en-NZ;en-SG;en-ZA</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="es">es-MX</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="it">it-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="nl">nl-BE</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="fr">fr-BE;fr-CA;fr-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="de">de-CH;de-AT</LocExtent>
+        <File name="Index.resx" noType="Comments" parser="[parser.Managed]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCMFabric\Source\HCMMarketingClientService\Resources\Views\Home</Var>
+          <Var name="File.BaseName">Index</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\Source\HCMMarketingClientService\Resources\Views\Home</Var>
+        </File>
+        <File name="Error.resx" noType="Comments" parser="[parser.Managed]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCMFabric\Source\HCMMarketingClientService\Resources\Views\Shared</Var>
+          <Var name="File.BaseName">Error</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\Source\HCMMarketingClientService\Resources\Views\Shared</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+        <Component name="HCMFabric" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">HCMApp_HCMFabric\Landing\EnvironmentAdmin</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[HRApp.40]</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="en-US">en-AU;en-CA;en-GB;en-IE;en-IN;en-MY;en-NZ;en-SG;en-ZA</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="es">es-MX</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="it">it-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="nl">nl-BE</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="fr">fr-BE;fr-CA;fr-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="de">de-CH;de-AT</LocExtent>
+        <File name="Index.resx" noType="Comments" parser="[parser.Managed]">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCMFabric\Source\HCMLandingClientService\Resources\Views\EnvironmentAdmin</Var>
+          <Var name="File.BaseName">Index</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\Source\HCMLandingClientService\Resources\Views\EnvironmentAdmin</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+    <Component name="HCMApp" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">HCMApp</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[HRApp.40]</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="en-US">en-AU;en-CA;en-GB;en-IE;en-IN;en-MY;en-NZ;en-SG;en-ZA</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="es">es-MX</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="it">it-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="nl">nl-BE</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="fr">fr-BE;fr-CA;fr-CH</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="de">de-CH;de-AT</LocExtent>
+        <File name="TimeAtt.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\TimeManagement\TimeManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TimeAtt</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\TimeManagement\TimeManagement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="PersonnelTasks.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelTasks\PersonnelTasks\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">PersonnelTasks</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelTasks\PersonnelTasks\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="HcmMobile.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelMobile\PersonnelMobile\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">HcmMobile</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelMobile\PersonnelMobile\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Workforce.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Workforce</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="TalentClient.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TalentClient</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Talent.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Talent</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Payroll.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Payroll</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="HcmACA.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">HcmACA</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="HCM.en-us.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">HCM</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="HcmOnboard.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">HcmOnboard</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Compensation.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Compensation</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Benefits.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Benefits</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Personnel.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\Personnel\Personnel\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Personnel</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\Personnel\Personnel\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="HumanCapitalManagement.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\HumanCapitalManagement\HumanCapitalManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">HumanCapitalManagement</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\HumanCapitalManagement\HumanCapitalManagement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="CaseManagement.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\CaseManagement\CaseManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">CaseManagement</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\CaseManagement\CaseManagement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="BusinessProcess.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\BusinessProcess\BusinessProcess\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">BusinessProcess</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\BusinessProcess\BusinessProcess\AxLabelFile\LabelResources</Var>
+        </File>
+
+        <!-- <File name="TaxBooksTests.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngineTests\TaxEngineTests\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TaxBooksTests</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">TaxEngineTests\TaxEngineTests\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="TaxSettlement.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TaxSettlement</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">TaxEngine\TaxEngine\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="TaxEngineInterface.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TaxEngineInterface</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">TaxEngine\TaxEngine\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="TaxEngineConfiguration.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TaxEngineConfiguration</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">TaxEngine\TaxEngine\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="TaxEngine.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TaxEngine</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">TaxEngine\TaxEngine\AxLabelFile\LabelResources</Var>
+        </File>-->
+        <File name="ElectronicReportingMapping.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\ElectronicReportingMapping\ElectronicReportingMapping\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">ElectronicReportingMapping</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\ElectronicReportingMapping\ElectronicReportingMapping\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="ElectronicReportingCore.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\ElectronicReportingCore\ElectronicReportingCore\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">ElectronicReportingCore</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\ElectronicReportingCore\ElectronicReportingCore\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="ElectronicReportingPrintManagementIntegration.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\ElectronicReporting\ElectronicReporting\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">ElectronicReportingPrintManagementIntegration</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\ElectronicReporting\ElectronicReporting\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="ElectronicReporting.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\ElectronicReporting\ElectronicReporting\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">ElectronicReporting</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\ElectronicReporting\ElectronicReporting\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="ApplicationCommon.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ApplicationCommon\source\metadata\ApplicationCommon\ApplicationCommon\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">ApplicationCommon</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ApplicationCommon\source\metadata\ApplicationCommon\ApplicationCommon\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="HierarchicalGridCommon.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ApplicationCommon\source\metadata\ApplicationCommon\ApplicationCommon\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">HierarchicalGridCommon</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ApplicationCommon\source\metadata\ApplicationCommon\ApplicationCommon\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="SysPolicy.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ApplicationCommon\source\metadata\Policy\Policy\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">SysPolicy</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ApplicationCommon\source\metadata\Policy\Policy\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="GlobalAddressBook.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ApplicationCommon\source\metadata\Directory\Directory\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">GlobalAddressBook</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ApplicationCommon\source\metadata\Directory\Directory\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="UnitOfMeasure.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ApplicationCommon\source\metadata\UnitOfMeasure\UnitOfMeasure\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">UnitOfMeasure</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ApplicationCommon\source\metadata\UnitOfMeasure\UnitOfMeasure\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="UserDefinedFields.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ApplicationCommon\source\metadata\ApplicationCommon\ApplicationCommon\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">UserDefinedFields</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ApplicationCommon\source\metadata\ApplicationCommon\ApplicationCommon\AxLabelFile\LabelResources</Var>
+        </File>
+        <!--<File name="SysBasicUpgrade.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ApplicationCommon\source\metadata\SysBasicUpgrade\SysBasicUpgrade\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">SysBasicUpgrade</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">SysBasicUpgrade\SysBasicUpgrade\AxLabelFile\LabelResources</Var>
+        </File>
+
+        <File name="DirectoryUpgrade.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ApplicationCommon\source\metadata\DirectoryUpgrade\DirectoryUpgrade\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">DirectoryUpgrade</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">DirectoryUpgrade\DirectoryUpgrade\AxLabelFile\LabelResources</Var>
+        </File>
+
+        <File name="UserDefinedFields.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ApplicationCommon\source\metadata\ApplicationCommon\ApplicationCommon\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">UserDefinedFields</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ApplicationCommon\ApplicationCommon\AxLabelFile\LabelResources</Var>
+        </File>-->
+
+        <!--<File name="Subledger.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\Subledger\Subledger\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Subledger</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">Subledger\Subledger\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="TaxEngineIntegration_SourceDocumentationTypes.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\SourceDocumentationTypes\SourceDocumentationTypes\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TaxEngineIntegration_SourceDocumentationTypes</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\SourceDocumentationTypes\SourceDocumentationTypes\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="TaxEngineIntegration_SourceDocumentation.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\SourceDocumentation\SourceDocumentation\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TaxEngineIntegration_SourceDocumentation</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\SourceDocumentation\SourceDocumentation\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="SourceDocumentation.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\SourceDocumentation\SourceDocumentation\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">SourceDocumentation</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\SourceDocumentation\SourceDocumentation\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="AccountingFramework.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\SourceDocumentation\SourceDocumentation\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">AccountingFramework</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCMFabric\SourceDocumentation\SourceDocumentation\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Measurement.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\Measurement\Measurement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Measurement</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">Measurement\Measurement\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="SegmentedEntry.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\Ledger\Ledger\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">SegmentedEntry</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">Ledger\Ledger\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Ledger.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\Ledger\Ledger\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Ledger</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">Ledger\Ledger\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="FieldDescriptions_Ledger.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\Ledger\Ledger\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">FieldDescriptions_Ledger</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">Ledger\Ledger\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="FieldDescriptions_GeneralLedger_Currency.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\Currency\Currency\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">FieldDescriptions_GeneralLedger_Currency</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">Accounting Foundation\source\metadata\Currency\Currency\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="FieldDescriptions_Hcm.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">FieldDescriptions_Hcm</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources</Var>
+        </File>-->
+        <File name="Dimension.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\Dimensions\Dimensions\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Dimension</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">Accounting Foundation\source\metadata\Dimensions\Dimensions\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="CurrencyExchange.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\Currency\Currency\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">CurrencyExchange</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">Accounting Foundation\source\metadata\Currency\Currency\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="Calendars.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Accounting Foundation\source\metadata\Calendar\Calendar\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">Calendars</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">Accounting Foundation\source\metadata\Calendar\Calendar\AxLabelFile\LabelResources</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+    <Component name="HCMApp_newFiles" package="[package.template]" contentType="UI" sourceCulture="en-US">
+  <Var name="ComponentFolder">HCMApp</Var>
+  <ItemGroup>
+    <LocExtent derivation="Translate">[HRApp.40]</LocExtent>
+    <LocExtent derivation="Adapt" parentCulture="en-US">en-AU;en-CA;en-GB;en-IE;en-IN;en-MY;en-NZ;en-SG;en-ZA</LocExtent>
+    <LocExtent derivation="Adapt" parentCulture="es">es-MX</LocExtent>
+    <LocExtent derivation="Adapt" parentCulture="it">it-CH</LocExtent>
+    <LocExtent derivation="Adapt" parentCulture="nl">nl-BE</LocExtent>
+    <LocExtent derivation="Adapt" parentCulture="fr">fr-BE;fr-CA;fr-CH</LocExtent>
+    <LocExtent derivation="Adapt" parentCulture="de">de-CH;de-AT</LocExtent>
+    <File name="PersonnelCore.en-US.label.txt" noType="Comments" parser="[parser.Txt]">
+      <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelCore\PersonnelCore\AxLabelFile\LabelResources\en-US</Var>
+      <Var name="File.BaseName">PersonnelCore</Var>
+      <Var name="File.ExtensionName">label.txt</Var>
+      <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelCore\PersonnelCore\AxLabelFile\LabelResources</Var>
+    </File>
+    <File name="HcmPeopleNavigatorControl.en-US.label.txt" noType="Comments" parser="[parser.Txt]">
+      <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-us</Var>
+      <Var name="File.BaseName">HcmPeopleNavigatorControl</Var>
+      <Var name="File.ExtensionName">label.txt</Var>
+      <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources</Var>
+    </File>
+    <File name="HcmPersonCard.en-US.label.txt" noType="Comments" parser="[parser.Txt]">
+      <Var name="File.SourceBinary">[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-us</Var>
+      <Var name="File.BaseName">HcmPersonCard</Var>
+      <Var name="File.ExtensionName">label.txt</Var>
+      <Var name="File.TargetLclLocation">HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources</Var>
+    </File>
+    <File name="TaxEngineConfiguration.en-US.label.txt" noType="Comments" parser="[parser.Txt]">
+      <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US</Var>
+      <Var name="File.BaseName">TaxEngineConfiguration</Var>
+      <Var name="File.ExtensionName">label.txt</Var>
+      <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources</Var>
+    </File>
+    <File name="TaxEngine.en-US.label.txt" noType="Comments" parser="[parser.Txt]">
+      <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US</Var>
+      <Var name="File.BaseName">TaxEngine</Var>
+      <Var name="File.ExtensionName">label.txt</Var>
+      <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources</Var>
+    </File>
+    <File name="TaxEngineInterface.en-US.label.txt" noType="Comments" parser="[parser.Txt]">
+      <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US</Var>
+      <Var name="File.BaseName">TaxEngineInterface</Var>
+      <Var name="File.ExtensionName">label.txt</Var>
+      <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources</Var>
+    </File>
+    <File name="TaxSettlement.en-US.label.txt" noType="Comments" parser="[parser.Txt]">
+      <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US</Var>
+      <Var name="File.BaseName">TaxSettlement</Var>
+      <Var name="File.ExtensionName">label.txt</Var>
+      <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources</Var>
+    </File>
+    <File name="GetStarted.en-US.label.txt" noType="Comments" parser="[parser.Txt]">
+      <Var name="File.SourceBinary">[git_OOBAPPs]\ApplicationCommon\source\metadata\ApplicationCommon\ApplicationCommon\AxLabelFile\LabelResources\en-US</Var>
+      <Var name="File.BaseName">GetStarted</Var>
+      <Var name="File.ExtensionName">label.txt</Var>
+      <Var name="File.TargetLclLocation">ApplicationCommon\source\metadata\ApplicationCommon\ApplicationCommon\AxLabelFile\LabelResources</Var>
+    </File>
+    <File name="SysBasicUpgrade.en-US.label.txt" noType="Comments" parser="[parser.Txt]">
+      <Var name="File.SourceBinary">[git_OOBAPPs]\ApplicationCommon\source\metadata\SysBasicUpgrade\SysBasicUpgrade\AxLabelFile\LabelResources\en-US</Var>
+      <Var name="File.BaseName">SysBasicUpgrade</Var>
+      <Var name="File.ExtensionName">label.txt</Var>
+      <Var name="File.TargetLclLocation">ApplicationCommon\source\metadata\SysBasicUpgrade\SysBasicUpgrade\AxLabelFile\LabelResources</Var>
+    </File>
+  </ItemGroup>
+</Component>
+    <Component name="ProductGraph" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">ProductGraph</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[ProductGraph.4]</LocExtent>
+        <File name="translation.json" parser="[parser.resjson]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\D365-ProductGraph-WebClient\src\app\lang\en-US</Var>
+          <Var name="File.BaseName">translation</Var>
+          <Var name="File.ExtensionName">json</Var>
+          <Var name="File.TargetLclLocation">D365-ProductGraph-WebClient\src\app\lang</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+ <!--   <Component name="TalentEngagement" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">TalentEngagement\Dynamics365-HCM-HiringClient</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[TalentEngagement.4]</LocExtent>
+        <File name="translation.json" parser="[parser.resjson]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Dynamics365-HCM-HiringClient\src\app\lang\en-US</Var>
+          <Var name="File.BaseName">translation</Var>
+          <Var name="File.ExtensionName">json</Var>
+          <Var name="File.TargetLclLocation">Dynamics365-HCM-HiringClient\src\app\lang</Var>
+        </File>
+      </ItemGroup>
+    </Component>-->
+    <Component name="TalentEngagement" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">TalentEngagement\Dynamics365-HCM-TalentEngagement</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[TalentEngagement.7]</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="en-US">en-CA</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="fr">fr-CA</LocExtent>
+        <File name="translation.json" parser="[parser.resjson]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Dynamics365-HCM-TalentEngagement\src\assets\lang\en</Var>
+          <Var name="File.BaseName">translation</Var>
+          <Var name="File.ExtensionName">json</Var>
+          <Var name="File.TargetLclLocation">Dynamics365-HCM-TalentEngagement\src\assets\lang</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+    <Component name="TalentEngagement" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">TalentEngagement\Dynamics365-HCM-OnboardingClient</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[TalentEngagement.7]</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="en-US">en-CA</LocExtent>
+        <LocExtent derivation="Adapt" parentCulture="fr">fr-CA</LocExtent>
+        <File name="translation.json" parser="[parser.resjson]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Dynamics365-HCM-OnboardingClient\src\app\lang\en-US</Var>
+          <Var name="File.BaseName">translation</Var>
+          <Var name="File.ExtensionName">json</Var>
+          <Var name="File.TargetLclLocation">Dynamics365-HCM-OnboardingClient\src\app\lang</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+    <Component name="Retail" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">Retail</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[Retail.7]</LocExtent>
+        <File name="Retail.en-US.label.txt" parser="[parser.txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Retail\App71MU\Source\AppIL\Metadata\ApplicationSuite\Foundation\AxLabelFile\LabelResources\en-us</Var>
+          <Var name="File.BaseName">Retail</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">App71MU\Source\AppIL\Metadata\ApplicationSuite\Foundation\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="resources.resjson" parser="[parser.resjson]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Retail\App71MU\Source\Frameworks\RetailRain\Components\Apps\Platform\Pos\SharedApp\Assets\Strings\en-US</Var>
+          <Var name="File.BaseName">resources</Var>
+          <Var name="File.ExtensionName">resjson</Var>
+          <Var name="File.TargetLclLocation">App71MU\Source\Frameworks\RetailRain\Components\Apps\Platform\Pos\SharedApp\Assets\Strings</Var>
+        </File>
+        <File name="Strings.resx" parser="[parser.managed]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Retail\App71MU\Source\Frameworks\RetailRain\Deployment\SelfService\Setup\App\Resources</Var>
+          <Var name="File.BaseName">Strings</Var>
+          <Var name="File.ExtensionName">resx</Var>
+          <Var name="File.TargetLclLocation">App71MU\Source\Frameworks\RetailRain\Deployment\SelfService\Setup\App\Resources</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+<!--    <Component name="TalentEngagement" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">TalentEngagement\Dynamics365-HCM-PerformanceClient</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[TalentEngagement.4]</LocExtent>
+        <File name="translation.json" parser="[parser.resjson]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Dynamics365-HCM-PerformanceClient\src\app\lang\en-US</Var>
+          <Var name="File.BaseName">translation</Var>
+          <Var name="File.ExtensionName">json</Var>
+          <Var name="File.TargetLclLocation">Dynamics365-HCM-PerformanceClient\src\app\lang</Var>
+        </File>
+      </ItemGroup>
+    </Component>-->
+        <Component name="CostAccounting" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">CostAccounting</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[TBD.4]</LocExtent>
+        <File name="CostAccountingAX.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Cost Accounting AX\source\Metadata\CostAccountingAX\CostAccountingAX\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">CostAccountingAX</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">Cost Accounting AX\source\Metadata\CostAccountingAX\CostAccountingAX\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="CostAccounting.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\Cost Accounting\source\Metadata\CostAccounting\CostAccounting\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">CostAccounting</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">Cost Accounting\source\Metadata\CostAccounting\CostAccounting\AxLabelFile\LabelResources</Var>
+        </File>
+              </ItemGroup>
+    </Component>
+    <Component name="TBD" package="[package.template]" contentType="UI" sourceCulture="en-US">
+      <Var name="ComponentFolder">TBD</Var>
+      <ItemGroup>
+        <LocExtent derivation="Translate">[TBD.4]</LocExtent>
+        <File name="TaxBooksTests.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngineTests\TaxEngineTests\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TaxBooksTests</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\TaxEngineTests\TaxEngineTests\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="TaxSettlement.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TaxSettlement</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="TaxEngineInterface.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TaxEngineInterface</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="TaxEngineConfiguration.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TaxEngineConfiguration</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="TaxEngine.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">TaxEngine</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources</Var>
+        </File>
+        <File name="ItemDimensionConversion.en-US.label.txt" parser="[parser.Txt]" noType="Comments">
+          <Var name="File.SourceBinary">[git_OOBAPPs]\WMS2Migration\source\AppIL\Metadata\InventoryDimensionConversion\InventoryDimensionConversion\AxLabelFile\LabelResources\en-US</Var>
+          <Var name="File.BaseName">ItemDimensionConversion</Var>
+          <Var name="File.ExtensionName">label.txt</Var>
+          <Var name="File.TargetLclLocation">WMS2Migration\source\AppIL\Metadata\InventoryDimensionConversion\InventoryDimensionConversion\AxLabelFile\LabelResources</Var>
+        </File>
+      </ItemGroup>
+    </Component>
+  </Project>
+</Eol>

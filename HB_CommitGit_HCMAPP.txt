@@ -1,3 +1,4 @@
 HCM;master
 ElectronicReporting;master
 ApplicationCommon;master
+ApplicationIntegration；master
