@@ -127,17 +127,17 @@ sd2gitNoEnUS4TalentEngagement(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','D
 sd2git(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','HCMApp',r'C:\Depots\MBSI\Projects\OOB\UI\OOBApps.eol')
 
 #########CDM files##############
-sd2git(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','PowerApps-CDM-Entities',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UITest.eol')
+sd2git(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','PowerApps-CDM-Entities',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
 ##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','cdm-outlook-addin',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UITest.eol')
+sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','cdm-outlook-addin',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
 ##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','client-control-lib',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UITest.eol')
+sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','client-control-lib',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
 ##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Metadata',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UITest.eol')
+sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Metadata',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
 ##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Connector',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UITest.eol')
+sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Connector',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
 ##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Discovery',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UITest.eol')
+sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Discovery',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
 
 ########AX7.x_OfficeApps files##########
 sd2gitNoEnUS4OfficeApp(r'C:\Depots\MBSI\Projects\AX\7.x_OfficeApps\UI\Master\OfficeApps\Source','AX7.x_OfficeApps',r'C:\Depots\MBSI\Projects\AX\7.x_OfficeApps\UI\AX7.x_OfficeApp_UI.eol')

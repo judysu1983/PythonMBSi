@@ -22,7 +22,7 @@ for line in fileinput.input("C:\\Depots\\MBSI\\Projects\\D365App\\UI\\UI.lmx", i
     print(line.strip('\n'))
     
 #update lmx for CDM
-for line in fileinput.input("C:\\Depots\\MBSI\\Projects\\CDM\\UI\\UI.lmx", inplace=True):
+for line in fileinput.input(r'C:\Depots\MBSI\Projects\CDM\UI\UI.lmx', inplace=True):
     line=re.sub(r"^.*?_Weekly.*?\n", "Custom 3	Equals	CDM_Weekly."+utc,line)
     print(line.strip('\n'))
 
@@ -41,10 +41,10 @@ for line in fileinput.input("C:\\Depots\\MBSI\\Projects\\OOB\\UI\\OOBAppsUI.lmx"
     line=re.sub(r"^.*?_Weekly.*?\n", "Custom 3	Equals	D365HCMApp_Weekly."+utc,line)
     print(line.strip('\n'))
 
-#update lmx for D365HCMApp UA
-for line in fileinput.input("C:\\Depots\\MBSI\\Projects\\OOB\\UA\\Field_Descriptions\\OOBAppsUA.lmx", inplace=True):
-    line=re.sub(r"^.*?_Weekly.*?\n", "Custom 3	Equals	D365HCMApp_FD_Weekly."+utc,line)
-    print(line.strip('\n'))
+###update lmx for D365HCMApp UA
+##for line in fileinput.input("C:\\Depots\\MBSI\\Projects\\OOB\\UA\\Field_Descriptions\\OOBAppsUA.lmx", inplace=True):
+##    line=re.sub(r"^.*?_Weekly.*?\n", "Custom 3	Equals	D365HCMApp_FD_Weekly."+utc,line)
+##    print(line.strip('\n'))
 
  
 

@@ -26,7 +26,7 @@ if os.path.exists(packagepath):
 os.makedirs(packagepath)
 os.chdir(packagepath)
 
-version = ['7.2.3109', '7.2.3077', '7.2.3043', '7.2.3055', '7.2.3054']
+version = ['7.3.4', '7.3.5', '7.3.1', '7.3.4', '7.3.7']
 
 hcmversion=version[0]
 print(hcmversion)
@@ -51,15 +51,15 @@ shutil.move('source','ApplicationIntegration')
 
 AccountingFoundationversion=version[3]
 print(AccountingFoundationversion)
-os.system('nuget install Microsoft.Dynamics.AX.AccountingFoundationPartialProd.Translations -Source "https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v2" -Version ' + AccountingFoundationversion)
-os.rename('Microsoft.Dynamics.AX.AccountingFoundationPartialProd.Translations'+'.'+ AccountingFoundationversion, 'source')
+os.system('nuget install Microsoft.Dynamics.AX.AccountingFoundationProd.Translations -version ' + AccountingFoundationversion)
+os.rename('Microsoft.Dynamics.AX.AccountingFoundationProd.Translations'+'.'+ AccountingFoundationversion, 'source')
 os.makedirs('Accounting Foundation')
 shutil.move('source','Accounting Foundation')
 
 ElectronicReportingVersion=version[4]
 print(ElectronicReportingVersion)
-os.system('nuget install Microsoft.Dynamics.AX.ElectronicReportingPartialProd.Translations -Source "https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json" -Version ' + ElectronicReportingVersion)
-os.rename('Microsoft.Dynamics.AX.ElectronicReportingPartialProd.Translations'+'.'+ ElectronicReportingVersion, 'source')
+os.system('nuget install Microsoft.Dynamics.AX.ElectronicReportingProd.Translations -source https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json -version ' + ElectronicReportingVersion)
+os.rename('Microsoft.Dynamics.AX.ElectronicReportingProd.Translations'+'.'+ ElectronicReportingVersion, 'source')
 os.makedirs('ElectronicReporting')
 shutil.move('source','ElectronicReporting')
 

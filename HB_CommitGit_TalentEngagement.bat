@@ -18,17 +18,21 @@ git pull
 rem https://yangsu.github.io/pull-request-tutorial/
 git checkout -b v-judysu/loc_%HBdate%
 rem to acquire the token
-npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false
-vsts-npm-auth -config .npmrc
+
 
 
 echo #############copy over udpated files############
 rem copy LCL files for HCM project
 cd C:\Python27 
 python copyTalentEngagement_v3.py %%a
+
+
 attrib -r %GitRoot%\%%a\localization\*.* /s
 cd "%GitRoot%\%%a"
 rem sync latest strings before creating PR
+rem npm install
+npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false
+vsts-npm-auth -config .npmrc
 npm run localization:extract 
 
 git add .
@@ -43,3 +47,4 @@ rem git push -u origin <new-branch-name>
 
 rem "C:\Program Files\Beyond Compare 4\Bcompare.exe" "C:\CTAS\OOBAPPs\runs" "C:\GitProjects"
 
+pause
