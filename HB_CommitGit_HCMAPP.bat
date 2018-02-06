@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 
 set GitRoot=C:\GitProjects
 
@@ -10,7 +10,7 @@ echo %HBdate%
 
 cd C:\Tools\CTAS2.2
 rem Dynamics 365 HCM App – 
-TaskEngine @C:\Depots\MBSI\Projects\OOB\UI\OOBApps.arg -scenario:WeeklyHandback -culture:ar;cs;da;de;es;et;fi;fr;hu;is;it;ja;lt;lv;nb-NO;nl;pl;pt-BR;ru;sv;th;tr;zh-Hans;nl-BE;fr-BE;fr-CA;fr-CH;de-AT;de-CH;es-MX;it-CH;en-AU;en-CA;en-GB;en-IE;en-MY;en-NZ;en-SG;en-ZA;en-IN
+rem TaskEngine @C:\Depots\MBSI\Projects\OOB\UI\OOBApps.arg -scenario:WeeklyHandback -culture:ar;cs;da;de;es;et;fi;fr;hu;is;it;ja;lt;lv;nb-NO;nl;pl;pt-BR;ru;sv;th;tr;zh-Hans;nl-BE;fr-BE;fr-CA;fr-CH;de-AT;de-CH;es-MX;it-CH;en-AU;en-CA;en-GB;en-IE;en-MY;en-NZ;en-SG;en-ZA;en-IN
 rem TaskEngine @C:\Depots\MBSI\Projects\OOB\UI\OOBApps_HCMFabric.arg -scenario:WeeklyHandback -culture:ar;cs;da;de;es;et;fi;fr;hu;is;it;ja;lt;lv;nb-NO;nl;pl;pt-BR;ru;sv;th;tr;zh-Hans;nl-BE;fr-BE;fr-CA;fr-CH;de-AT;de-CH;es-MX;it-CH;en-AU;en-CA;en-GB;en-IE;en-MY;en-NZ;en-SG;en-ZA;en-IN
 rem c:\Windows\explorer.exe "C:\CTAS\OOBAPPs\runs"
 c:\Windows\explorer.exe "C:\GitProjects"

@@ -1,2 +1,3 @@
-cdm-outlook-addin;master
+PowerApps-Runtime-Discovery;dev
 PowerApps-Runtime-Metadata;dev
+PowerApps-CDM-Entities;develop

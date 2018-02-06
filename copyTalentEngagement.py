@@ -47,6 +47,7 @@ def renameMessages():
                         #print('to '+dst)
                         if not os.path.exists(dst):
                                 os.rename(src,dst)
+                os.system('attrib -r C:\\Gitprojects\\'+com+'\\localization\\*.xlf /s')
 copymessages()
 renameMessages()
 

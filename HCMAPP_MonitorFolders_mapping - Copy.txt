@@ -4,11 +4,6 @@ CDM\UI\master\Source\Connector;PowerApps-Runtime-Connector;*.resx;dev
 CDM\UI\master\Source\Discovery;PowerApps-Runtime-Discovery;*.resx;dev
 CDM\UI\master\Source\Metadata;PowerApps-Runtime-Metadata;*.resx;dev
 CDM\UI\master\Source\PowerApps-CDM-Entities;PowerApps-CDM-Entities;*.label.txt;master
-OOB\UI\Master\Source\TalentEngagement\Dynamics365-HCM-OnboardingClient;Dynamics365-HCM-OnboardingClient;*.xlf;master
-OOB\UI\Master\Source\TalentEngagement\Dynamics365-HCM-MsAssessClient;Dynamics365-HCM-MsAssessClient;*.xlf;master
-OOB\UI\Master\Source\TalentEngagement\Dynamics365-HCM-TalentEngagement;Dynamics365-HCM-TalentEngagement;*.xlf;master
-OOB\UI\Master\Source\TalentEngagement\Dynamics365-HCM-AppsPortalClient;Dynamics365-HCM-AppsPortalClient;*.xlf;master
-OOB\UI\Master\Source\TalentEngagement\Dynamics365-HCM-OfferManagement;Dynamics365-HCM-OfferManagement;*.xlf;master
 OOB\UI\master\Source\HcmApp;HCM;*.label.txt;master
 OOB\UI\master\Source\HcmApp;ApplicationCommon;*.label.txt;master
 OOB\UI\master\Source\HcmApp;ElectronicReporting;*.label.txt;master
@@ -18,4 +13,8 @@ OOB\UI\master\Source\HcmApp;ApplicationIntegration;*.label.txt;master
 D365App\UI\Master\Source\mobile-app;mobile-app;*.json;master
 AX\7.x_OfficeApps\UI\Master\OfficeApps\Source;OfficeApps;*.resjson;master
 D365Shell\UI\Master\Source\Portal;Dynamics365-Dynamics365-Portal;*.resx;master
-
+OOB\UI\Master\Source\TalentEngagement\Dynamics365-HCM-OnboardingClient;Dynamics365-HCM-OnboardingClient;*.xlf;master
+OOB\UI\Master\Source\TalentEngagement\Dynamics365-HCM-MsAssessClient;Dynamics365-HCM-MsAssessClient;*.xlf;master
+OOB\UI\Master\Source\TalentEngagement\Dynamics365-HCM-TalentEngagement;Dynamics365-HCM-TalentEngagement;*.xlf;master
+OOB\UI\Master\Source\TalentEngagement\Dynamics365-HCM-AppsPortalClient;Dynamics365-HCM-AppsPortalClient;*.xlf;master
+OOB\UI\Master\Source\TalentEngagement\Dynamics365-HCM-OfferManagement;Dynamics365-HCM-OfferManagement;*.xlf;master

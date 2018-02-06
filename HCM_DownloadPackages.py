@@ -26,7 +26,7 @@ if os.path.exists(packagepath):
 os.makedirs(packagepath)
 os.chdir(packagepath)
 
-version = ['7.3.4', '7.3.5', '7.3.1', '7.3.4', '7.3.7']
+version = ['7.3.4057', '7.3.4028', '7.3.17', '7.3.4033', '7.3.4045']
 
 hcmversion=version[0]
 print(hcmversion)
@@ -51,7 +51,7 @@ shutil.move('source','ApplicationIntegration')
 
 AccountingFoundationversion=version[3]
 print(AccountingFoundationversion)
-os.system('nuget install Microsoft.Dynamics.AX.AccountingFoundationProd.Translations -version ' + AccountingFoundationversion)
+os.system('nuget install Microsoft.Dynamics.AX.AccountingFoundationProd.Translations -Source "https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v2" -Version ' + AccountingFoundationversion)
 os.rename('Microsoft.Dynamics.AX.AccountingFoundationProd.Translations'+'.'+ AccountingFoundationversion, 'source')
 os.makedirs('Accounting Foundation')
 shutil.move('source','Accounting Foundation')

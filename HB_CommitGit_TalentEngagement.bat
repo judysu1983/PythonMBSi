@@ -33,7 +33,7 @@ rem sync latest strings before creating PR
 rem npm install
 npm install -g vsts-npm-auth --registry https://registry.npmjs.com --always-auth false
 vsts-npm-auth -config .npmrc
-npm run localization:extract 
+npm run localization:extract
 
 git add .
 git status

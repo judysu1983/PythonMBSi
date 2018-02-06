@@ -10,14 +10,16 @@ import os
 
 
 
-fullfilename=["PersonnelCore.en-US.label.txt", "HcmPeopleNavigatorControl.en-US.label.txt", "HcmPersonCard.en-US.label.txt", "TaxEngineConfiguration.en-US.label.txt", "TaxEngine.en-US.label.txt", "TaxEngineInterface.en-US.label.txt", "TaxSettlement.en-US.label.txt", "GetStarted.en-US.label.txt", "SysBasicUpgrade.en-US.label.txt"]
+#fullfilename=["PersonnelCore.en-US.label.txt", "HcmPeopleNavigatorControl.en-US.label.txt", "HcmPersonCard.en-US.label.txt", "TaxEngineConfiguration.en-US.label.txt", "TaxEngine.en-US.label.txt", "TaxEngineInterface.en-US.label.txt", "TaxSettlement.en-US.label.txt", "GetStarted.en-US.label.txt", "SysBasicUpgrade.en-US.label.txt"]
+fullfilename=["Ledger.en-us.label.txt", "Measurement.en-us.label.txt", "AccountingFramework.en-us.label.txt", "SourceDocumentation.en-us.label.txt", "TaxEngineIntegration_SourceDoc.en-us.label.txt", "TaxEngineIntegration_SourceDocTypes.en-us.label.txt", "Subledger.en-us.label.txt"]
 sourcelocation=["[git_OOBAPPs]\HCM\source\metadata\PersonnelCore\PersonnelCore\AxLabelFile\LabelResources\en-US", "[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-us", "[git_OOBAPPs]\HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources\en-us", "[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US", "[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US", "[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US", "[git_OOBAPPs]\ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources\en-US", "[git_OOBAPPs]\ApplicationCommon\source\metadata\ApplicationCommon\ApplicationCommon\AxLabelFile\LabelResources\en-US", "[git_OOBAPPs]\ApplicationCommon\source\metadata\SysBasicUpgrade\SysBasicUpgrade\AxLabelFile\LabelResources\en-US"]
-BaseName=["PersonnelCore", "HcmPeopleNavigatorControl", "HcmPersonCard", "TaxEngineConfiguration", "TaxEngine", "TaxEngineInterface", "TaxSettlement", "GetStarted", "SysBasicUpgrade"]
+#BaseName=["PersonnelCore", "HcmPeopleNavigatorControl", "HcmPersonCard", "TaxEngineConfiguration", "TaxEngine", "TaxEngineInterface", "TaxSettlement", "GetStarted", "SysBasicUpgrade"]
+BaseName=["Ledger", "Measurement", "AccountingFramework", "SourceDocumentation", "TaxEngineIntegration_SourceDoc", "TaxEngineIntegration_SourceDocTypes", "Subledger"]
 ExtensionName="label.txt"
 TargetLclLocation= ["HCM\source\metadata\PersonnelCore\PersonnelCore\AxLabelFile\LabelResources", "HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources", "HCM\source\metadata\PersonnelManagement\PersonnelManagement\AxLabelFile\LabelResources", "ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources", "ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources", "ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources", "ElectronicReporting\source\metadata\TaxEngine\TaxEngine\AxLabelFile\LabelResources", "ApplicationCommon\source\metadata\ApplicationCommon\ApplicationCommon\AxLabelFile\LabelResources", "ApplicationCommon\source\metadata\SysBasicUpgrade\SysBasicUpgrade\AxLabelFile\LabelResources"]
 
 root=ETXML.Element('EOL')
-for i in range(0,9):
+for i in range(0,7):
     sub=ETXML.SubElement(root, "File", name=fullfilename[i], parser="[parser.Txt]", noType="Comments")
     #ETXML.SubElement(sub, "File", name="BusinessProcess.en-US.label.txt" parser="[parser.Txt]" noType="Comments").text='\n'
     #ETXML.SubElement(sub, "File", name=fullfilename, parser="[parser.Txt]", noType="Comments").text = "\n"
