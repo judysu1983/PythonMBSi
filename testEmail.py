@@ -1,4 +1,6 @@
 import smtplib
+import csv
+import datetime
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 from email.MIMEBase import MIMEBase
@@ -7,16 +9,28 @@ from email import encoders
 
 COMMASPACE = ', '
 
+def totalwc(wcfile):
+    with open(wcfile) as wc:
+        headerline=wc.next()
+        total = 0
+        for row in csv.reader(wc):
+            total += float(row[-1])
+        return total
+
 fromaddr = "v-judysu@microsoft.com"
 toaddr = ["v-judysu@microsoft.com", "suli2921@gmail.com"]
- 
+td=datetime.datetime.now()
+td=td.strftime("%b.%d")
+
 msg = MIMEMultipart()
  
 msg['From'] = fromaddr
 msg['To'] = COMMASPACE.join(toaddr)
-msg['Subject'] = "SUBJECT OF THE EMAIL"
- 
-body = "Today's word count for HCMApps"
+msg['Subject'] = str(td)+ " HCM word count"
+
+totalwcHCM=totalwc(r'C:\test\TWAnalyze_HCMApps.csv')
+
+body = "Today's HCM total ajusted word count is " + str(totalwcHCM)
  
 msg.attach(MIMEText(body, 'plain'))
  
@@ -36,3 +50,5 @@ server.login(fromaddr, "lina555%")
 text = msg.as_string()
 server.sendmail(fromaddr, toaddr, text)
 server.quit()
+
+
