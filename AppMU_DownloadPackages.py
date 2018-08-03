@@ -19,14 +19,14 @@ def del_rw(action, name, exc):
 
    
 
-packagepath=r'C:\SourceMonitor\P'
+packagepath=r'C:\test\AppMUPackages'
 
 if os.path.exists(packagepath):
     shutil.rmtree(packagepath, onerror=del_rw)
 os.makedirs(packagepath)
 os.chdir(packagepath)
 
-version = ['8.1.56', '8.1.12', '8.1.18', '8.1.19', '8.1.6']
+version = ['8.0.59', '8.0.43', '8.0.30', '8.0.44', '8.0.29', '8.0.1009']
 
 hcmversion=version[0]
 print(hcmversion)
@@ -65,7 +65,12 @@ os.rename('Microsoft.Dynamics.AX.ElectronicReportingProd.Translations'+'.'+ Elec
 os.makedirs('ElectronicReporting')
 shutil.move('source','ElectronicReporting')
 
-
+CostAccountingVersion=version[5]
+print(CostAccountingVersion)
+os.system('nuget install Microsoft.Dynamics.AX.CostAccountingVersionProd.Translations -source https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json -version ' + CostAccountingVersion)
+os.rename('Microsoft.Dynamics.AX.CostAccountingVersionProd.Translations'+'.'+ CostAccountingVersion, 'source')
+os.makedirs('Cost Accounting')
+shutil.move('source','Cost Accounting')
 
 
 

@@ -1,4 +1,4 @@
-ApplicationCommon;master
-ElectronicReporting;master
 HCM;master
 Accounting Foundation;master
+
+

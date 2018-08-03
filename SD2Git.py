@@ -116,6 +116,82 @@ def sd2gitNoEnUS4OfficeApp(Master,Component,EOLfile):
             if os.path.exists(sdfile):
                 if not os.path.exists(targetfile):
                     shutil.copy2(sdfile,targetfile)
+
+def sd2git4HCMFabric(Master,Component,EOLfile):
+
+    root = ET.parse(EOLfile).getroot()
+
+
+    #".//ItemGroup/..[@name='PowerApps-CDM-Entities']"
+    #xpathExpression=('.//ItemGroup/..[@name="%s"]' %Component)
+    print('.//ItemGroup/..[@name="%s"]' %Component)
+    coms=root.findall('.//ItemGroup/..[@name="%s"]' %Component)
+    for c in coms:
+        files=c.findall("./ItemGroup/File")
+        for f in files:
+            print(f.get('name'))
+
+            sdfile=os.path.join(Master,Component,'Landing',f.get('name'))
+            print('From ' +sdfile)
+            targetfile=os.path.join(SDCopy, f.getchildren()[3].text,f.get('name'))
+            print('To ' +targetfile)
+            print('')
+            if not os.path.exists(os.path.join(SDCopy, f.getchildren()[3].text)):
+                os.makedirs(os.path.join(SDCopy, f.getchildren()[3].text))
+            if os.path.exists(sdfile):
+                if not os.path.exists(targetfile):
+                    shutil.copy2(sdfile,targetfile)
+
+def sd2gitAX_Application(Master,Component,EOLfile):
+
+    root = ET.parse(EOLfile).getroot()
+
+
+    #".//ItemGroup/..[@name='PowerApps-CDM-Entities']"
+    #xpathExpression=('.//ItemGroup/..[@name="%s"]' %Component)
+    print('.//ItemGroup/..[@name="%s"]' %Component)
+    coms=root.findall('.//ItemGroup/..[@name="%s"]' %Component)
+    for c in coms:
+        files=c.findall("./ItemGroup/File")
+        for f in files:
+            print(f.get('name'))
+
+            sdfile=os.path.join(Master,'HCMApp',f.get('name'))
+            print('From ' +sdfile)
+            targetfile=os.path.join(SDCopy, f.getchildren()[3].text,'en-US',f.get('name'))
+            print('To ' +targetfile)
+            print('')
+            if not os.path.exists(os.path.join(SDCopy, f.getchildren()[3].text,'en-US')):
+                os.makedirs(os.path.join(SDCopy, f.getchildren()[3].text,'en-US'))
+            if os.path.exists(sdfile):
+                if not os.path.exists(targetfile):
+                    shutil.copy2(sdfile,targetfile)
+                    
+
+def sd2gitCostAccounting(Master,Component,EOLfile):
+
+    root = ET.parse(EOLfile).getroot()
+
+
+    #".//ItemGroup/..[@name='PowerApps-CDM-Entities']"
+    #xpathExpression=('.//ItemGroup/..[@name="%s"]' %Component)
+    print('.//ItemGroup/..[@name="%s"]' %Component)
+    coms=root.findall('.//ItemGroup/..[@name="%s"]' %Component)
+    for c in coms:
+        files=c.findall("./ItemGroup/File")
+        for f in files:
+            print(f.get('name'))
+
+            sdfile=os.path.join(Master,'CostAccounting',f.get('name'))
+            print('From ' +sdfile)
+            targetfile=os.path.join(SDCopy, f.getchildren()[3].text,'en-US',f.get('name'))
+            print('To ' +targetfile)
+            print('')
+            if not os.path.exists(os.path.join(SDCopy, f.getchildren()[3].text,'en-US')):
+                os.makedirs(os.path.join(SDCopy, f.getchildren()[3].text,'en-US'))
+            if os.path.exists(sdfile):
+                if not os.path.exists(targetfile):
+                    shutil.copy2(sdfile,targetfile)
                     
 ########Taleng Engagement files#
 sd2gitNoEnUS4TalentEngagement(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','Dynamics365-HCM-MsAssessClient',r'C:\Depots\MBSI\Projects\OOB\UI\TalentEngagement.eol')
@@ -125,19 +201,26 @@ sd2gitNoEnUS4TalentEngagement(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','D
 sd2gitNoEnUS4TalentEngagement(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','Dynamics365-HCM-OfferManagement',r'C:\Depots\MBSI\Projects\OOB\UI\TalentEngagement.eol')
 #########HCM files##############
 sd2git(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','HCMApp',r'C:\Depots\MBSI\Projects\OOB\UI\OOBApps.eol')
+sd2gitAX_Application(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','AX_Application',r'C:\Depots\MBSI\Projects\OOB\UI\OOBApps.eol')
+sd2gitCostAccounting(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','CostAccounting',r'C:\Depots\MBSI\Projects\OOB\UI\OOBApps.eol')
+sd2git4HCMFabric(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','HCMApp_HCMFabric',r'C:\Depots\MBSI\Projects\OOB\UI\OOBApps.eol')
 
-#########CDM files##############
-sd2git(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','PowerApps-CDM-Entities',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
-##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','cdm-outlook-addin',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
-##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','client-control-lib',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
-##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Metadata',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
-##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Connector',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
-##
-sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Discovery',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
+###Office App###
+sd2gitNoEnUS4OfficeApp(r'C:\Depots\MBSI\Projects\AX\7.x_OfficeApps\UI\Master\OfficeApps\Source','AX7.x_OfficeApps',r'C:\Depots\MBSI\Projects\AX\7.x_OfficeApps\UI\AX7.x_OfficeApp_UI.eol')
+
+
+##sd2git4App7x(r'C:\Depots\MBSI\Projects\OOB\UI\Master\source','App7.x',r'C:\Depots\MBSI\Projects\OOB\UI\OOBApps.eol')
+###########CDM files##############
+##sd2git(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','PowerApps-CDM-Entities',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
+####
+##sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','cdm-outlook-addin',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
+####
+##sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','client-control-lib',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
+####
+##sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Metadata',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
+####
+##sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Connector',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
+####
+##sd2gitNoEnUS(r'C:\Depots\MBSI\Projects\CDM\UI\Master\source','Discovery',r'C:\Depots\MBSI\Projects\CDM\UI\CDM_UI.eol')
 
 ########AX7.x_OfficeApps files##########
-sd2gitNoEnUS4OfficeApp(r'C:\Depots\MBSI\Projects\AX\7.x_OfficeApps\UI\Master\OfficeApps\Source','AX7.x_OfficeApps',r'C:\Depots\MBSI\Projects\AX\7.x_OfficeApps\UI\AX7.x_OfficeApp_UI.eol')

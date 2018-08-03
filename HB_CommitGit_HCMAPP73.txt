@@ -1,0 +1,5 @@
+HCM;release/App73
+Accounting%20Foundation;release/App73
+ElectronicReporting;release/App73_CU
+ApplicationCommon;release/App73
+Cost%20Accounting;release/App73

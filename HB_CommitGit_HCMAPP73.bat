@@ -1,8 +1,8 @@
 ﻿@echo off
 
-set GitRoot=C:\GitProjects
+set GitRoot=C:\test\App73
 
-set Mapping=HB_CommitGit_HCMAPP.txt
+set Mapping=HB_CommitGit_HCMAPP73.txt
 
 FOR /F "tokens=1-4 delims=/- " %%i IN ('date/T') DO set HBdate=%%j%%k%%l
 echo %HBdate%
@@ -17,7 +17,7 @@ rem c:\Windows\explorer.exe "C:\GitProjects"
 
 rem copy LCL files for HCM project
 cd C:\Python27 
-python copyHCMLCLfiles.py
+rem python tmp_copyApp73HCMLCLfiles2Git.py
 
 
 for /F "usebackq delims=; tokens=1,2,3" %%a in (%Mapping%) do (
@@ -25,6 +25,7 @@ for /F "usebackq delims=; tokens=1,2,3" %%a in (%Mapping%) do (
 cd "%GitRoot%\%%a"
 git status
 git checkout -f %%b
+
 git pull
 rem https://yangsu.github.io/pull-request-tutorial/
 git checkout -b v-judysu/loc_%HBdate%
@@ -35,7 +36,7 @@ pause
 git add *.lcl
 git status
 
-pause
+
 git commit -m "Localization Updates"
 git push -u origin v-judysu/loc_%HBdate%
 rem git push -u origin <new-branch-name>
