@@ -18,7 +18,7 @@ def totalwc(wcfile):
         return total
 
 fromaddr = "v-judysu@microsoft.com"
-toaddr = ["v-judysu@microsoft.com", "suli2921@gmail.com"]
+toaddr = ["v-judysu@microsoft.com", "ejcho@microsoft.com"]
 td=datetime.datetime.now()
 td=td.strftime("%b.%d")
 
@@ -26,11 +26,11 @@ msg = MIMEMultipart()
  
 msg['From'] = fromaddr
 msg['To'] = COMMASPACE.join(toaddr)
-msg['Subject'] = str(td)+ " HCM word count"
+msg['Subject'] = str(td)+ " HCMApp word count"
 
 totalwcHCM=totalwc(r'C:\test\TWAnalyze_HCMApps.csv')
 
-body = "Today's HCM total ajusted word count is " + str(totalwcHCM)
+body = "Based on the latest source in git repo, HCMApp total ajusted word count is " + str(totalwcHCM)
  
 msg.attach(MIMEText(body, 'plain'))
  
@@ -46,7 +46,7 @@ msg.attach(part)
  
 server = smtplib.SMTP('smtp.office365.com', 587)
 server.starttls()
-server.login(fromaddr, "lina555%")
+server.login(fromaddr, "niki999(")
 text = msg.as_string()
 server.sendmail(fromaddr, toaddr, text)
 server.quit()
