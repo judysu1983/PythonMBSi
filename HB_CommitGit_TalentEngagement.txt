@@ -1,4 +1,4 @@
-Dynamics365-HCM-TalentEngagement;master
-Dynamics365-HCM-OfferManagement;master
+Dynamics365-HCM-Offermanagement;master
 Dynamics365-HCM-Jobs;master
-
+Dynamics365-HCM-OnboardingClient;master
+Dynamics365-HCM-TalentEngagement;master

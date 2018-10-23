@@ -1,0 +1,15 @@
+Alerts.resources.dll
+Databaselog.resources.dll
+aoseventfile.dll
+axsysen-us.ktd
+ApplicationFoundation.resources.dll
+FormRunConfiguration.resources.dll
+LeanProductionFlowVisualization.resources.dll
+ProductFramework_Batch.resources.dll
+ProductFramework_SystemJobs.resources.dll
+SYS.resources.dll
+ApplicationPlatform.resources.dll
+CLIFramework.resources.dll
+CLINavigationBar.resources.dll
+DMF.resources.dll
+PowerBIIntegration.resources.dll

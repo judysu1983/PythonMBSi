@@ -17,7 +17,7 @@ rem c:\Windows\explorer.exe "C:\GitProjects"
 
 rem copy LCL files for HCM project
 cd C:\Python27 
-python copyHCMLCLfiles.py
+rem python copyHCMLCLfiles.py
 
 
 for /F "usebackq delims=; tokens=1,2,3" %%a in (%Mapping%) do (
@@ -35,7 +35,7 @@ pause
 git add *.lcl
 git status
 
-pause
+
 git commit -m "Localization Updates"
 git push -u origin v-judysu/loc_%HBdate%
 rem git push -u origin <new-branch-name>

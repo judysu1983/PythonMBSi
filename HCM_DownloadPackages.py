@@ -26,7 +26,7 @@ if os.path.exists(packagepath):
 os.makedirs(packagepath)
 os.chdir(packagepath)
 
-version = ['8.1.56', '8.1.12', '8.1.18', '8.1.19', '8.1.6']
+version = ['8.1.148-rainmain0004', '8.1.39', '8.1.7', '8.1.74', '8.1.33']
 
 hcmversion=version[0]
 print(hcmversion)
@@ -42,12 +42,18 @@ os.rename('Microsoft.Dynamics.AX.ApplicationCommonProd.Translations'+'.'+ Applic
 os.makedirs('ApplicationCommon')
 shutil.move('source','ApplicationCommon')
 
-ApplicationIntegrationversion=version[2]
-print(ApplicationIntegrationversion)
-os.system('nuget install Microsoft.Dynamics.AX.ApplicationIntegrationProd.Translations -Source "https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json" -Version ' + ApplicationIntegrationversion)
-os.rename('Microsoft.Dynamics.AX.ApplicationIntegrationProd.Translations'+'.'+ ApplicationIntegrationversion, 'source')
-os.makedirs('ApplicationIntegration')
-shutil.move('source','ApplicationIntegration')
+##ApplicationIntegrationversion=version[2]
+##print(ApplicationIntegrationversion)
+##os.system('nuget install Microsoft.Dynamics.AX.ApplicationIntegrationProd.Translations -Source "https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json" -Version ' + ApplicationIntegrationversion)
+##os.rename('Microsoft.Dynamics.AX.ApplicationIntegrationProd.Translations'+'.'+ ApplicationIntegrationversion, 'source')
+##os.makedirs('ApplicationIntegration')
+##shutil.move('source','ApplicationIntegration')
+CostAccountingVersion=version[2]
+print(CostAccountingVersion)
+os.system('nuget install Microsoft.Dynamics.AX.CostAccountingProd.Translations -Source "https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json" -Version ' + CostAccountingVersion)
+os.rename('Microsoft.Dynamics.AX.CostAccountingProd.Translations'+'.'+ CostAccountingVersion, 'source')
+os.makedirs('CostAccounting')
+shutil.move('source','CostAccounting')
 
 
 AccountingFoundationversion=version[3]

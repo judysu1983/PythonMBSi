@@ -1,0 +1,7 @@
+WAX.resources.dll
+SCM.resources.dll
+AccountsPayable.resources.dll
+GeneralLedger.resources.dll
+aaa.dll
+CashManagement.resources.dll
+Retail.resources.dll

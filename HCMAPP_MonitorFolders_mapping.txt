@@ -9,6 +9,8 @@ OOB\UI\master\Source\HcmApp;ApplicationCommon;*.label.txt;master
 OOB\UI\master\Source\HcmApp;ElectronicReporting;*.label.txt;master
 OOB\UI\master\Source\HcmApp;Accounting Foundation;*.label.txt;master
 OOB\UI\master\Source\HcmApp_HCMFabric;AosPaas-LandingService;*.en-US.resx;master
+OOB\UI\master\Source\RCS;AosPaas-MarketingService;*.en-US.resx;RCS/develop
+OOB\UI\master\Source\RCS;ElectronicReporting-LandingService;*.en-US.resx;develop
 OOB\UI\master\Source\HcmApp;ApplicationIntegration;*.label.txt;master
 OOB\UI\master\Source\CostAccounting;Cost Accounting;*.label.txt;master
 D365App\UI\Master\Source\mobile-app;mobile-app;*.json;master

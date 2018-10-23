@@ -26,7 +26,7 @@ if os.path.exists(packagepath):
 os.makedirs(packagepath)
 os.chdir(packagepath)
 
-version = ['8.0.59', '8.0.43', '8.0.30', '8.0.44', '8.0.29', '8.0.1009']
+version = ['8.0.59', '8.0.43', '8.0.30', '8.0.44', '8.0.29', '8.0.1014']
 
 hcmversion=version[0]
 print(hcmversion)

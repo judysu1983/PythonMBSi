@@ -63,6 +63,36 @@ rename C:\SourceMonitor\GitCopy\AOSPaas-landingService\Src\AosPaas.LandingServic
 rename C:\SourceMonitor\GitCopy\AOSPaas-landingService\Src\AosPaas.LandingService\Resources\SharedResource.en-US.resx SharedResource.resx
 
 
+del C:\SourceMonitor\GitCopy\AosPaas-MarketingService\src\AosPaas.MarketingService\Resources\Views\Home\Index.resx
+del C:\SourceMonitor\GitCopy\AosPaas-MarketingService\src\AosPaas.MarketingService\Resources\Views\Shared\Error.resx
+
+del C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\SharedResource.resx
+del C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Home\TenantOwner.resx
+del C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Home\SelectBapLocation.resx
+
+del C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Home\Provisioning.resx
+del C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Home\Legal.resx
+del C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Home\Index.resx
+del C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Shared\__Layout.resx
+del C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Shared\Error.resx
+del C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Shared\ComingSoon.resx
+
+rename C:\SourceMonitor\GitCopy\AosPaas-MarketingService\src\AosPaas.MarketingService\Resources\Views\Home\Index.en-US.resx Index.resx
+rename C:\SourceMonitor\GitCopy\AosPaas-MarketingService\src\AosPaas.MarketingService\Resources\Views\Shared\Error.en-US.resx Error.resx
+
+rename C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\SharedResource.en-US.resx SharedResource.resx
+rename C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Home\TenantOwner.en-US.resx TenantOwner.resx
+rename C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Home\SelectBapLocation.en-US.resx SelectBapLocation.resx
+
+rename C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Home\Provisioning.en-US.resx Provisioning.resx
+rename C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Home\Legal.en-US.resx Legal.resx
+rename C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Home\Index.en-US.resx Index.resx
+rename C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Shared\_Layout.en-US.resx _Layout.resx
+rename C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Shared\Error.en-US.resx Error.resx
+rename C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Shared\ComingSoon.en-US.resx ComingSoon.resx
+
+rename C:\SourceMonitor\GitCopy\ElectronicReporting-LandingService\src\AosPaas.LandingService\Resources\Views\Home\Signup.en-US.resx Signup.resx
+
 
 rem the following path still need fixing
 robocopy C:\Depots\MBSI\Projects\OOB\UI\Master\source\HCMApp_HCMFabric\Landing  C:\SourceMonitor\SDCopy\AOSPaas.landingService\Src\AosPaas.LandingService *.* /S

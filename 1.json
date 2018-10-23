@@ -1,0 +1,592 @@
+﻿{
+  "value": [
+    {
+      "repository": {
+        "id": "61621db5-4458-4b8f-8919-a3e898a74073",
+        "name": "Dynamics365-HCM-OfferManagement",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073",
+        "project": {
+          "id": "b32aa71e-8ed2-41b2-9d77-5bc261222004",
+          "name": "One",
+          "state": "unchanged",
+          "visibility": "unchanged"
+        }
+      },
+      "pullRequestId": 1042347,
+      "codeReviewId": 1211272,
+      "status": "active",
+      "createdBy": {
+        "displayName": "Sridhar Pratapa",
+        "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/8c90d91f-7249-4e10-84e2-bcf963c441dc",
+        "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.Y2IyZjlkMWEtMDZhNi03YzhkLWE5MDctM2MxZTczZDRiZTI4" } },
+        "id": "8c90d91f-7249-4e10-84e2-bcf963c441dc",
+        "uniqueName": "srpratap@microsoft.com",
+        "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=8c90d91f-7249-4e10-84e2-bcf963c441dc",
+        "descriptor": "aad.Y2IyZjlkMWEtMDZhNi03YzhkLWE5MDctM2MxZTczZDRiZTI4"
+      },
+      "creationDate": "2018-08-23T14:51:31.9266792Z",
+      "title": "Candidate V2: Decline Offer Fix",
+      "sourceRefName": "refs/heads/dev/srpratap/bvtfix",
+      "targetRefName": "refs/heads/master",
+      "mergeStatus": "succeeded",
+      "mergeId": "52f6ce5f-4bf7-48fb-b0c1-cd957dbe5948",
+      "lastMergeSourceCommit": {
+        "commitId": "a57562b6c09f158d060f7796e97cedb0a1c385c8",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/commits/a57562b6c09f158d060f7796e97cedb0a1c385c8"
+      },
+      "lastMergeTargetCommit": {
+        "commitId": "56c286e363e2af47b9b74570ce37a093cb9ae67b",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/commits/56c286e363e2af47b9b74570ce37a093cb9ae67b"
+      },
+      "lastMergeCommit": {
+        "commitId": "76c5630c7512584763fb2cbd74f5c0322cbd550e",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/commits/76c5630c7512584763fb2cbd74f5c0322cbd550e"
+      },
+      "reviewers": [
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1042347/reviewers/949ad344-99b6-4270-957e-1f15fdd53a8e",
+          "vote": 0,
+          "displayName": "Jaydeep Baliram Sawant",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/949ad344-99b6-4270-957e-1f15fdd53a8e",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.MThiYjQ3NTUtMDY5Yy03ZTQ3LWIxY2QtMzJkZGE3OThmY2Ji" } },
+          "id": "949ad344-99b6-4270-957e-1f15fdd53a8e",
+          "uniqueName": "jsawant@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=949ad344-99b6-4270-957e-1f15fdd53a8e"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1042347/reviewers/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "vote": -5,
+          "isRequired": true,
+          "displayName": "[D365]\\HCM Team",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS0xNjEzODE0ODI3LTE5NzYzNDk3NzEtMjM5MTEyMTEyOS0yMTc5NDgyMTA2LTEtMTE4NjQzMDE3MC0xNTU4MzM2NzEtMjU5NTc4MjYwNC0zODIzMjMyOTQw" } },
+          "id": "27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "uniqueName": "vstfs:///Classification/TeamProject/2bdc3060-cc75-4bb4-8e85-9ce981e841fa\\HCM Team",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "isContainer": true
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1042347/reviewers/bbfc9235-c140-4146-a7e5-5dfa82320475",
+          "vote": 0,
+          "displayName": "Archit Shukla",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/bbfc9235-c140-4146-a7e5-5dfa82320475",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.NDY2ODlhZTYtZTA4YS03MTgzLTk3ZTgtNTk5OTJhZTY3YmY0" } },
+          "id": "bbfc9235-c140-4146-a7e5-5dfa82320475",
+          "uniqueName": "arshukla@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=bbfc9235-c140-4146-a7e5-5dfa82320475"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1042347/reviewers/de31f1e7-43a7-42b0-8e35-b82c4194469a",
+          "vote": 0,
+          "displayName": "Anil Bandla",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/de31f1e7-43a7-42b0-8e35-b82c4194469a",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.Y2VhNzU5YzUtYzRhMi03OGIwLTg4YWEtNmVjMGMyYWQxMWE4" } },
+          "id": "de31f1e7-43a7-42b0-8e35-b82c4194469a",
+          "uniqueName": "abandla@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=de31f1e7-43a7-42b0-8e35-b82c4194469a"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1042347/reviewers/8c90d91f-7249-4e10-84e2-bcf963c441dc",
+          "vote": -5,
+          "votedFor": [
+            {
+              "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1042347/reviewers/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+              "vote": 0,
+              "displayName": "[D365]\\HCM Team",
+              "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+              "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS0xNjEzODE0ODI3LTE5NzYzNDk3NzEtMjM5MTEyMTEyOS0yMTc5NDgyMTA2LTEtMTE4NjQzMDE3MC0xNTU4MzM2NzEtMjU5NTc4MjYwNC0zODIzMjMyOTQw" } },
+              "id": "27bc98cd-6d57-40eb-ae46-592e39c95a72",
+              "uniqueName": "vstfs:///Classification/TeamProject/2bdc3060-cc75-4bb4-8e85-9ce981e841fa\\HCM Team",
+              "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=27bc98cd-6d57-40eb-ae46-592e39c95a72",
+              "isContainer": true
+            },
+            {
+              "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1042347/reviewers/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+              "vote": 0,
+              "displayName": "[TEAM FOUNDATION]\\D365 Talent Engineering India",
+              "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+              "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aadgp.Uy0xLTktMTU1MTM3NDI0NS0xMjA0NDAwOTY5LTI0MDI5ODY0MTMtMjE3OTQwODYxNi0zLTIyNjMyODQ4ODEtNDA1OTg0NjcyNS0yNjIzMjE0MTI2LTMwNDcxMjY1MQ" } },
+              "id": "7dd27ea6-c299-4bc8-944d-e2058ada9195",
+              "uniqueName": "vstfs:///Framework/IdentityDomain/b962ed4f-6670-4a37-ad24-8b9381530e67\\D365 Talent Engineering India",
+              "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=7dd27ea6-c299-4bc8-944d-e2058ada9195",
+              "isContainer": true
+            }
+          ],
+          "displayName": "Sridhar Pratapa",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/8c90d91f-7249-4e10-84e2-bcf963c441dc",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.Y2IyZjlkMWEtMDZhNi03YzhkLWE5MDctM2MxZTczZDRiZTI4" } },
+          "id": "8c90d91f-7249-4e10-84e2-bcf963c441dc",
+          "uniqueName": "srpratap@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=8c90d91f-7249-4e10-84e2-bcf963c441dc"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1042347/reviewers/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "vote": -5,
+          "isRequired": true,
+          "displayName": "[TEAM FOUNDATION]\\D365 Talent Engineering India",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aadgp.Uy0xLTktMTU1MTM3NDI0NS0xMjA0NDAwOTY5LTI0MDI5ODY0MTMtMjE3OTQwODYxNi0zLTIyNjMyODQ4ODEtNDA1OTg0NjcyNS0yNjIzMjE0MTI2LTMwNDcxMjY1MQ" } },
+          "id": "7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "uniqueName": "vstfs:///Framework/IdentityDomain/b962ed4f-6670-4a37-ad24-8b9381530e67\\D365 Talent Engineering India",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "isContainer": true
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1042347/reviewers/86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23",
+          "vote": 0,
+          "displayName": "Anil Chandra Lingam",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.ZDJlNGU5ZGEtYTdkMS03YTIxLWJmM2QtZjZhOTIxMTdjYTI5" } },
+          "id": "86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23",
+          "uniqueName": "anill@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23"
+        }
+      ],
+      "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1042347",
+      "supportsIterations": true
+    },
+    {
+      "repository": {
+        "id": "61621db5-4458-4b8f-8919-a3e898a74073",
+        "name": "Dynamics365-HCM-OfferManagement",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073",
+        "project": {
+          "id": "b32aa71e-8ed2-41b2-9d77-5bc261222004",
+          "name": "One",
+          "state": "unchanged",
+          "visibility": "unchanged"
+        }
+      },
+      "pullRequestId": 1036645,
+      "codeReviewId": 1204551,
+      "status": "active",
+      "createdBy": {
+        "displayName": "srinu Gogireddy",
+        "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/00eb7334-2314-6a6e-91ac-869f5b8793d9",
+        "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.MDBlYjczMzQtMjMxNC03YTZlLTkxYWMtODY5ZjViODc5M2Q5" } },
+        "id": "00eb7334-2314-6a6e-91ac-869f5b8793d9",
+        "uniqueName": "sring@microsoft.com",
+        "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=00eb7334-2314-6a6e-91ac-869f5b8793d9",
+        "descriptor": "aad.MDBlYjczMzQtMjMxNC03YTZlLTkxYWMtODY5ZjViODc5M2Q5"
+      },
+      "creationDate": "2018-08-21T13:40:09.2629972Z",
+      "title": "figma differences",
+      "description": "figma differences",
+      "sourceRefName": "refs/heads/dev/sring/figmamismatches",
+      "targetRefName": "refs/heads/master",
+      "mergeStatus": "succeeded",
+      "mergeId": "ee1245d9-e27b-4f05-bc58-054fdec09005",
+      "lastMergeSourceCommit": {
+        "commitId": "1f14bcafffd0194e12ce7479f4a10ba6a037e413",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/commits/1f14bcafffd0194e12ce7479f4a10ba6a037e413"
+      },
+      "lastMergeTargetCommit": {
+        "commitId": "e142bfe3ca228d8352bc54738032bc96f9076eca",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/commits/e142bfe3ca228d8352bc54738032bc96f9076eca"
+      },
+      "lastMergeCommit": {
+        "commitId": "4da5d02a63f9eee2a01df3764e41684cc20d7f4d",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/commits/4da5d02a63f9eee2a01df3764e41684cc20d7f4d"
+      },
+      "reviewers": [
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1036645/reviewers/949ad344-99b6-4270-957e-1f15fdd53a8e",
+          "vote": 0,
+          "displayName": "Jaydeep Baliram Sawant",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/949ad344-99b6-4270-957e-1f15fdd53a8e",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.MThiYjQ3NTUtMDY5Yy03ZTQ3LWIxY2QtMzJkZGE3OThmY2Ji" } },
+          "id": "949ad344-99b6-4270-957e-1f15fdd53a8e",
+          "uniqueName": "jsawant@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=949ad344-99b6-4270-957e-1f15fdd53a8e"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1036645/reviewers/06d25969-c526-454a-853d-3e4382009f2b",
+          "vote": 10,
+          "displayName": "[One]\\Dynamics365-HCM",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/06d25969-c526-454a-853d-3e4382009f2b",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS01MTQyNzE5MjMtMzUzMjU2NzEwNS0yNjQxODQ1MTg2LTE2Mjk2MjYzNzItMS0xMDM3NzMwMDIxLTMwNTQ4ODg1MTMtMjQyMDczOTIyMy00Mjg2MTQ5MjM2" } },
+          "id": "06d25969-c526-454a-853d-3e4382009f2b",
+          "uniqueName": "vstfs:///Classification/TeamProject/b32aa71e-8ed2-41b2-9d77-5bc261222004\\Dynamics365-HCM",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=06d25969-c526-454a-853d-3e4382009f2b",
+          "isContainer": true
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1036645/reviewers/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "vote": 10,
+          "isRequired": true,
+          "displayName": "[D365]\\HCM Team",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS0xNjEzODE0ODI3LTE5NzYzNDk3NzEtMjM5MTEyMTEyOS0yMTc5NDgyMTA2LTEtMTE4NjQzMDE3MC0xNTU4MzM2NzEtMjU5NTc4MjYwNC0zODIzMjMyOTQw" } },
+          "id": "27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "uniqueName": "vstfs:///Classification/TeamProject/2bdc3060-cc75-4bb4-8e85-9ce981e841fa\\HCM Team",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "isContainer": true
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1036645/reviewers/bbfc9235-c140-4146-a7e5-5dfa82320475",
+          "vote": 10,
+          "votedFor": [
+            {
+              "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1036645/reviewers/06d25969-c526-454a-853d-3e4382009f2b",
+              "vote": 0,
+              "displayName": "[One]\\Dynamics365-HCM",
+              "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/06d25969-c526-454a-853d-3e4382009f2b",
+              "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS01MTQyNzE5MjMtMzUzMjU2NzEwNS0yNjQxODQ1MTg2LTE2Mjk2MjYzNzItMS0xMDM3NzMwMDIxLTMwNTQ4ODg1MTMtMjQyMDczOTIyMy00Mjg2MTQ5MjM2" } },
+              "id": "06d25969-c526-454a-853d-3e4382009f2b",
+              "uniqueName": "vstfs:///Classification/TeamProject/b32aa71e-8ed2-41b2-9d77-5bc261222004\\Dynamics365-HCM",
+              "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=06d25969-c526-454a-853d-3e4382009f2b",
+              "isContainer": true
+            },
+            {
+              "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1036645/reviewers/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+              "vote": 0,
+              "displayName": "[D365]\\HCM Team",
+              "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+              "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS0xNjEzODE0ODI3LTE5NzYzNDk3NzEtMjM5MTEyMTEyOS0yMTc5NDgyMTA2LTEtMTE4NjQzMDE3MC0xNTU4MzM2NzEtMjU5NTc4MjYwNC0zODIzMjMyOTQw" } },
+              "id": "27bc98cd-6d57-40eb-ae46-592e39c95a72",
+              "uniqueName": "vstfs:///Classification/TeamProject/2bdc3060-cc75-4bb4-8e85-9ce981e841fa\\HCM Team",
+              "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=27bc98cd-6d57-40eb-ae46-592e39c95a72",
+              "isContainer": true
+            },
+            {
+              "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1036645/reviewers/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+              "vote": 0,
+              "displayName": "[TEAM FOUNDATION]\\D365 Talent Engineering India",
+              "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+              "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aadgp.Uy0xLTktMTU1MTM3NDI0NS0xMjA0NDAwOTY5LTI0MDI5ODY0MTMtMjE3OTQwODYxNi0zLTIyNjMyODQ4ODEtNDA1OTg0NjcyNS0yNjIzMjE0MTI2LTMwNDcxMjY1MQ" } },
+              "id": "7dd27ea6-c299-4bc8-944d-e2058ada9195",
+              "uniqueName": "vstfs:///Framework/IdentityDomain/b962ed4f-6670-4a37-ad24-8b9381530e67\\D365 Talent Engineering India",
+              "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=7dd27ea6-c299-4bc8-944d-e2058ada9195",
+              "isContainer": true
+            }
+          ],
+          "displayName": "Archit Shukla",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/bbfc9235-c140-4146-a7e5-5dfa82320475",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.NDY2ODlhZTYtZTA4YS03MTgzLTk3ZTgtNTk5OTJhZTY3YmY0" } },
+          "id": "bbfc9235-c140-4146-a7e5-5dfa82320475",
+          "uniqueName": "arshukla@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=bbfc9235-c140-4146-a7e5-5dfa82320475"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1036645/reviewers/de31f1e7-43a7-42b0-8e35-b82c4194469a",
+          "vote": 0,
+          "displayName": "Anil Bandla",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/de31f1e7-43a7-42b0-8e35-b82c4194469a",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.Y2VhNzU5YzUtYzRhMi03OGIwLTg4YWEtNmVjMGMyYWQxMWE4" } },
+          "id": "de31f1e7-43a7-42b0-8e35-b82c4194469a",
+          "uniqueName": "abandla@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=de31f1e7-43a7-42b0-8e35-b82c4194469a"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1036645/reviewers/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "vote": 10,
+          "isRequired": true,
+          "displayName": "[TEAM FOUNDATION]\\D365 Talent Engineering India",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aadgp.Uy0xLTktMTU1MTM3NDI0NS0xMjA0NDAwOTY5LTI0MDI5ODY0MTMtMjE3OTQwODYxNi0zLTIyNjMyODQ4ODEtNDA1OTg0NjcyNS0yNjIzMjE0MTI2LTMwNDcxMjY1MQ" } },
+          "id": "7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "uniqueName": "vstfs:///Framework/IdentityDomain/b962ed4f-6670-4a37-ad24-8b9381530e67\\D365 Talent Engineering India",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "isContainer": true
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1036645/reviewers/86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23",
+          "vote": 0,
+          "displayName": "Anil Chandra Lingam",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.ZDJlNGU5ZGEtYTdkMS03YTIxLWJmM2QtZjZhOTIxMTdjYTI5" } },
+          "id": "86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23",
+          "uniqueName": "anill@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23"
+        }
+      ],
+      "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1036645",
+      "completionOptions": {
+        "mergeCommitMessage": "Merged PR 1036645: figma differences\n\nfigma differences\n\nRelated work items: #2846789",
+        "squashMerge": true,
+        "bypassReason": ""
+      },
+      "supportsIterations": true
+    },
+    {
+      "repository": {
+        "id": "61621db5-4458-4b8f-8919-a3e898a74073",
+        "name": "Dynamics365-HCM-OfferManagement",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073",
+        "project": {
+          "id": "b32aa71e-8ed2-41b2-9d77-5bc261222004",
+          "name": "One",
+          "state": "unchanged",
+          "visibility": "unchanged"
+        }
+      },
+      "pullRequestId": 1032754,
+      "codeReviewId": 1200065,
+      "status": "active",
+      "createdBy": {
+        "displayName": "Rahul Sawhney",
+        "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/5a457e3b-b6bc-4707-81e7-dbc35efa9db9",
+        "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.ZTI4MWY5NjMtYzE0OS03NzcyLTg3NTEtYzI4ZTA3MWQ4YmQz" } },
+        "id": "5a457e3b-b6bc-4707-81e7-dbc35efa9db9",
+        "uniqueName": "rasawhn@microsoft.com",
+        "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=5a457e3b-b6bc-4707-81e7-dbc35efa9db9",
+        "descriptor": "aad.ZTI4MWY5NjMtYzE0OS03NzcyLTg3NTEtYzI4ZTA3MWQ4YmQz"
+      },
+      "creationDate": "2018-08-19T05:51:45.8627504Z",
+      "title": "Fix for Connect/Disconnect buttons are hidden in small screens in User settings",
+      "description": "Fix for Connect/Disconnect buttons are hidden in small screens in User settings",
+      "sourceRefName": "refs/heads/dev/rasawhn/bugfix-2869058",
+      "targetRefName": "refs/heads/master",
+      "mergeStatus": "succeeded",
+      "mergeId": "cee0f4ed-771c-476a-b1d2-a5eb9c28de01",
+      "lastMergeSourceCommit": {
+        "commitId": "04e17155745e8da01c4df97809c9945ca985882b",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/commits/04e17155745e8da01c4df97809c9945ca985882b"
+      },
+      "lastMergeTargetCommit": {
+        "commitId": "d9c559611959cc22ca2d5aa3bb5dd96cd2475533",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/commits/d9c559611959cc22ca2d5aa3bb5dd96cd2475533"
+      },
+      "lastMergeCommit": {
+        "commitId": "1f471a19578d1bda0661f8fab833db1769a3f378",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/commits/1f471a19578d1bda0661f8fab833db1769a3f378"
+      },
+      "reviewers": [
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1032754/reviewers/949ad344-99b6-4270-957e-1f15fdd53a8e",
+          "vote": 0,
+          "displayName": "Jaydeep Baliram Sawant",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/949ad344-99b6-4270-957e-1f15fdd53a8e",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.MThiYjQ3NTUtMDY5Yy03ZTQ3LWIxY2QtMzJkZGE3OThmY2Ji" } },
+          "id": "949ad344-99b6-4270-957e-1f15fdd53a8e",
+          "uniqueName": "jsawant@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=949ad344-99b6-4270-957e-1f15fdd53a8e"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1032754/reviewers/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "vote": 0,
+          "isRequired": true,
+          "displayName": "[D365]\\HCM Team",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS0xNjEzODE0ODI3LTE5NzYzNDk3NzEtMjM5MTEyMTEyOS0yMTc5NDgyMTA2LTEtMTE4NjQzMDE3MC0xNTU4MzM2NzEtMjU5NTc4MjYwNC0zODIzMjMyOTQw" } },
+          "id": "27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "uniqueName": "vstfs:///Classification/TeamProject/2bdc3060-cc75-4bb4-8e85-9ce981e841fa\\HCM Team",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "isContainer": true
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1032754/reviewers/bbfc9235-c140-4146-a7e5-5dfa82320475",
+          "vote": 0,
+          "displayName": "Archit Shukla",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/bbfc9235-c140-4146-a7e5-5dfa82320475",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.NDY2ODlhZTYtZTA4YS03MTgzLTk3ZTgtNTk5OTJhZTY3YmY0" } },
+          "id": "bbfc9235-c140-4146-a7e5-5dfa82320475",
+          "uniqueName": "arshukla@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=bbfc9235-c140-4146-a7e5-5dfa82320475"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1032754/reviewers/de31f1e7-43a7-42b0-8e35-b82c4194469a",
+          "vote": 0,
+          "displayName": "Anil Bandla",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/de31f1e7-43a7-42b0-8e35-b82c4194469a",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.Y2VhNzU5YzUtYzRhMi03OGIwLTg4YWEtNmVjMGMyYWQxMWE4" } },
+          "id": "de31f1e7-43a7-42b0-8e35-b82c4194469a",
+          "uniqueName": "abandla@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=de31f1e7-43a7-42b0-8e35-b82c4194469a"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1032754/reviewers/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "vote": 0,
+          "isRequired": true,
+          "displayName": "[TEAM FOUNDATION]\\D365 Talent Engineering India",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aadgp.Uy0xLTktMTU1MTM3NDI0NS0xMjA0NDAwOTY5LTI0MDI5ODY0MTMtMjE3OTQwODYxNi0zLTIyNjMyODQ4ODEtNDA1OTg0NjcyNS0yNjIzMjE0MTI2LTMwNDcxMjY1MQ" } },
+          "id": "7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "uniqueName": "vstfs:///Framework/IdentityDomain/b962ed4f-6670-4a37-ad24-8b9381530e67\\D365 Talent Engineering India",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "isContainer": true
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1032754/reviewers/86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23",
+          "vote": 0,
+          "displayName": "Anil Chandra Lingam",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.ZDJlNGU5ZGEtYTdkMS03YTIxLWJmM2QtZjZhOTIxMTdjYTI5" } },
+          "id": "86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23",
+          "uniqueName": "anill@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23"
+        }
+      ],
+      "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1032754",
+      "supportsIterations": true
+    },
+    {
+      "repository": {
+        "id": "61621db5-4458-4b8f-8919-a3e898a74073",
+        "name": "Dynamics365-HCM-OfferManagement",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073",
+        "project": {
+          "id": "b32aa71e-8ed2-41b2-9d77-5bc261222004",
+          "name": "One",
+          "state": "unchanged",
+          "visibility": "unchanged"
+        }
+      },
+      "pullRequestId": 1030120,
+      "codeReviewId": 1196999,
+      "status": "active",
+      "createdBy": {
+        "displayName": "srinu Gogireddy",
+        "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/00eb7334-2314-6a6e-91ac-869f5b8793d9",
+        "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.MDBlYjczMzQtMjMxNC03YTZlLTkxYWMtODY5ZjViODc5M2Q5" } },
+        "id": "00eb7334-2314-6a6e-91ac-869f5b8793d9",
+        "uniqueName": "sring@microsoft.com",
+        "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=00eb7334-2314-6a6e-91ac-869f5b8793d9",
+        "descriptor": "aad.MDBlYjczMzQtMjMxNC03YTZlLTkxYWMtODY5ZjViODc5M2Q5"
+      },
+      "creationDate": "2018-08-17T09:36:45.9996218Z",
+      "title": "Offer packages - Back button , changes for context",
+      "sourceRefName": "refs/heads/dev/sring/bugfixes",
+      "targetRefName": "refs/heads/master",
+      "mergeStatus": "succeeded",
+      "mergeId": "8612fce8-011b-42de-86ab-d4185808e254",
+      "lastMergeSourceCommit": {
+        "commitId": "0f68b332639849cd501f2381180488575f07489c",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/commits/0f68b332639849cd501f2381180488575f07489c"
+      },
+      "lastMergeTargetCommit": {
+        "commitId": "e573193bc302bc9ed3e8c11a238fb704f5beddcc",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/commits/e573193bc302bc9ed3e8c11a238fb704f5beddcc"
+      },
+      "lastMergeCommit": {
+        "commitId": "56d37def198a214a85448c5f944ad5af510bc02e",
+        "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/commits/56d37def198a214a85448c5f944ad5af510bc02e"
+      },
+      "reviewers": [
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1030120/reviewers/e6dba24a-2b89-438e-88cc-02673a13b77d",
+          "vote": -5,
+          "votedFor": [
+            {
+              "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1030120/reviewers/06d25969-c526-454a-853d-3e4382009f2b",
+              "vote": 0,
+              "displayName": "[One]\\Dynamics365-HCM",
+              "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/06d25969-c526-454a-853d-3e4382009f2b",
+              "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS01MTQyNzE5MjMtMzUzMjU2NzEwNS0yNjQxODQ1MTg2LTE2Mjk2MjYzNzItMS0xMDM3NzMwMDIxLTMwNTQ4ODg1MTMtMjQyMDczOTIyMy00Mjg2MTQ5MjM2" } },
+              "id": "06d25969-c526-454a-853d-3e4382009f2b",
+              "uniqueName": "vstfs:///Classification/TeamProject/b32aa71e-8ed2-41b2-9d77-5bc261222004\\Dynamics365-HCM",
+              "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=06d25969-c526-454a-853d-3e4382009f2b",
+              "isContainer": true
+            },
+            {
+              "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1030120/reviewers/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+              "vote": 0,
+              "displayName": "[D365]\\HCM Team",
+              "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+              "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS0xNjEzODE0ODI3LTE5NzYzNDk3NzEtMjM5MTEyMTEyOS0yMTc5NDgyMTA2LTEtMTE4NjQzMDE3MC0xNTU4MzM2NzEtMjU5NTc4MjYwNC0zODIzMjMyOTQw" } },
+              "id": "27bc98cd-6d57-40eb-ae46-592e39c95a72",
+              "uniqueName": "vstfs:///Classification/TeamProject/2bdc3060-cc75-4bb4-8e85-9ce981e841fa\\HCM Team",
+              "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=27bc98cd-6d57-40eb-ae46-592e39c95a72",
+              "isContainer": true
+            },
+            {
+              "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1030120/reviewers/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+              "vote": 0,
+              "displayName": "[TEAM FOUNDATION]\\D365 Talent Engineering India",
+              "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+              "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aadgp.Uy0xLTktMTU1MTM3NDI0NS0xMjA0NDAwOTY5LTI0MDI5ODY0MTMtMjE3OTQwODYxNi0zLTIyNjMyODQ4ODEtNDA1OTg0NjcyNS0yNjIzMjE0MTI2LTMwNDcxMjY1MQ" } },
+              "id": "7dd27ea6-c299-4bc8-944d-e2058ada9195",
+              "uniqueName": "vstfs:///Framework/IdentityDomain/b962ed4f-6670-4a37-ad24-8b9381530e67\\D365 Talent Engineering India",
+              "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=7dd27ea6-c299-4bc8-944d-e2058ada9195",
+              "isContainer": true
+            }
+          ],
+          "displayName": "Sukesh Gundoji",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/e6dba24a-2b89-438e-88cc-02673a13b77d",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.ZDEzZTdhMTktNDA1MS03YWU2LTk0YTgtM2NkYjgzN2JlMTY5" } },
+          "id": "e6dba24a-2b89-438e-88cc-02673a13b77d",
+          "uniqueName": "sukgun@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=e6dba24a-2b89-438e-88cc-02673a13b77d"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1030120/reviewers/949ad344-99b6-4270-957e-1f15fdd53a8e",
+          "vote": 0,
+          "displayName": "Jaydeep Baliram Sawant",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/949ad344-99b6-4270-957e-1f15fdd53a8e",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.MThiYjQ3NTUtMDY5Yy03ZTQ3LWIxY2QtMzJkZGE3OThmY2Ji" } },
+          "id": "949ad344-99b6-4270-957e-1f15fdd53a8e",
+          "uniqueName": "jsawant@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=949ad344-99b6-4270-957e-1f15fdd53a8e"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1030120/reviewers/06d25969-c526-454a-853d-3e4382009f2b",
+          "vote": -5,
+          "displayName": "[One]\\Dynamics365-HCM",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/06d25969-c526-454a-853d-3e4382009f2b",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS01MTQyNzE5MjMtMzUzMjU2NzEwNS0yNjQxODQ1MTg2LTE2Mjk2MjYzNzItMS0xMDM3NzMwMDIxLTMwNTQ4ODg1MTMtMjQyMDczOTIyMy00Mjg2MTQ5MjM2" } },
+          "id": "06d25969-c526-454a-853d-3e4382009f2b",
+          "uniqueName": "vstfs:///Classification/TeamProject/b32aa71e-8ed2-41b2-9d77-5bc261222004\\Dynamics365-HCM",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=06d25969-c526-454a-853d-3e4382009f2b",
+          "isContainer": true
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1030120/reviewers/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "vote": -5,
+          "isRequired": true,
+          "displayName": "[D365]\\HCM Team",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS0xNjEzODE0ODI3LTE5NzYzNDk3NzEtMjM5MTEyMTEyOS0yMTc5NDgyMTA2LTEtMTE4NjQzMDE3MC0xNTU4MzM2NzEtMjU5NTc4MjYwNC0zODIzMjMyOTQw" } },
+          "id": "27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "uniqueName": "vstfs:///Classification/TeamProject/2bdc3060-cc75-4bb4-8e85-9ce981e841fa\\HCM Team",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=27bc98cd-6d57-40eb-ae46-592e39c95a72",
+          "isContainer": true
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1030120/reviewers/bbfc9235-c140-4146-a7e5-5dfa82320475",
+          "vote": 0,
+          "displayName": "Archit Shukla",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/bbfc9235-c140-4146-a7e5-5dfa82320475",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.NDY2ODlhZTYtZTA4YS03MTgzLTk3ZTgtNTk5OTJhZTY3YmY0" } },
+          "id": "bbfc9235-c140-4146-a7e5-5dfa82320475",
+          "uniqueName": "arshukla@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=bbfc9235-c140-4146-a7e5-5dfa82320475"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1030120/reviewers/de31f1e7-43a7-42b0-8e35-b82c4194469a",
+          "vote": 0,
+          "displayName": "Anil Bandla",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/de31f1e7-43a7-42b0-8e35-b82c4194469a",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.Y2VhNzU5YzUtYzRhMi03OGIwLTg4YWEtNmVjMGMyYWQxMWE4" } },
+          "id": "de31f1e7-43a7-42b0-8e35-b82c4194469a",
+          "uniqueName": "abandla@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=de31f1e7-43a7-42b0-8e35-b82c4194469a"
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1030120/reviewers/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "vote": -5,
+          "isRequired": true,
+          "displayName": "[TEAM FOUNDATION]\\D365 Talent Engineering India",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aadgp.Uy0xLTktMTU1MTM3NDI0NS0xMjA0NDAwOTY5LTI0MDI5ODY0MTMtMjE3OTQwODYxNi0zLTIyNjMyODQ4ODEtNDA1OTg0NjcyNS0yNjIzMjE0MTI2LTMwNDcxMjY1MQ" } },
+          "id": "7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "uniqueName": "vstfs:///Framework/IdentityDomain/b962ed4f-6670-4a37-ad24-8b9381530e67\\D365 Talent Engineering India",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=7dd27ea6-c299-4bc8-944d-e2058ada9195",
+          "isContainer": true
+        },
+        {
+          "reviewerUrl": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1030120/reviewers/86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23",
+          "vote": 0,
+          "displayName": "Anil Chandra Lingam",
+          "url": "https://vssps.dev.azure.com/e/Microsoft/_apis/Identities/86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23",
+          "_links": { "avatar": { "href": "https://msazure.visualstudio.com/_apis/GraphProfile/MemberAvatars/aad.ZDJlNGU5ZGEtYTdkMS03YTIxLWJmM2QtZjZhOTIxMTdjYTI5" } },
+          "id": "86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23",
+          "uniqueName": "anill@microsoft.com",
+          "imageUrl": "https://msazure.visualstudio.com/_api/_common/identityImage?id=86e616ad-1ae0-4b9f-a0b5-ecc583cf1b23"
+        }
+      ],
+      "url": "https://msazure.visualstudio.com/b32aa71e-8ed2-41b2-9d77-5bc261222004/_apis/git/repositories/61621db5-4458-4b8f-8919-a3e898a74073/pullRequests/1030120",
+      "supportsIterations": true
+    }
+  ],
+  "count": 4
+}
