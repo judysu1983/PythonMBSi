@@ -26,15 +26,6 @@ for x in all_subdirs:
     
     buildpath=os.path.abspath(latest_subdir)
     logging.debug(buildpath)
-##    print(latest_subdir)
-
-##f=['AX7.x_UI_BI.arg']
-###update build number in AX7.x_UI_BI.arg
-##fp = fileinput.input(files=f, inplace=True, backup='.bak')
-##r= re.compile(r"BuildNumber_rainMain=.*", re.IGNORECASE)
-##for line in fp:
-##    print r.sub(r'BuildNumber_rainMain='+latest_subdir,line)
-##fp.close()
 
 def del_rw(action, name, exc):
     os.chmod(name, stat.S_IWRITE)
@@ -73,25 +64,11 @@ fp.close()
 os.system(r"C:\Users\v-judysu\Downloads\SR\SR32.exe /cC:\Python27\SRscript\RemoveemptyLines.srs /r /n /q")
 
 ##############################update Search*srs for the updated custom 3 value.
-#run search and replace to reformat the result
+# search and replace to reformat the result
 os.system(r"C:\Users\v-judysu\Downloads\SR\SR32.exe /cC:\Python27\SRscript\SearchbyCustom3.srs /s /n /q")
 os.system(r"C:\Users\v-judysu\Downloads\SR\SR32.exe /cC:\Python27\SRscript\reformateResults.srs /r /n /q")
 shutil.copy2(r'C:\Python27\SRscript\searchbyC3results.txt', os.path.join(r'C:\Python27\SRscript\\'+latest_subdir+'.log'))
 shutil.copy2(r'C:\Python27\AppMUStablog.txt', os.path.join(r'C:\Python27\SRscript\\'+latest_subdir+'AppMUStabcopy.log'))
 
 
-#pivot analysis the C:\Python27\SRscript\searchbyC3results.txt
-##searchResult=['searchbyC3results.txt']
-##sr=fileinput.input(files=searchResult, inplace=True, backup='.bak')
-##r= re.compile(r"LINE .*\n", re.IGNORECASE)
-##for line in sr:
-##    line=r.sub('',line)
-##    if not line.strip(): continue
-##    print line
-##sr.close()
-##
-##with open('searchbyC3results.txt') as infile, open('output.txt', 'w') as outfile:
-##    for line in infile:
-##        if not line.strip(): continue  # skip the empty line
-##        outfile.write(line)  
 

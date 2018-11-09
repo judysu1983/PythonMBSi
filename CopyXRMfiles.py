@@ -8,7 +8,7 @@ def del_rw(action, name, exc):
 #copy from C:\CTAS\OOBAPPs\runs\20180328-204222-m47pt9qfp7\work\GeneratedPackage\HCM\source\Packages\HumanCapitalManagementIntegration\Build\XRMSolutions\HCMCommon\Components\Resources\ar\resources.ar.resx
 #to C:\test\XRMHB\HCM\source\Packages\HumanCapitalManagementIntegration\Build\XRMSolutions\HCMCommon\Components\Resources\ar-SA\resources.ar-SA.resx
 
-CTASpath=r'C:\CTAS\OOBAPPs\runs\20181011-161757-x87dnnq5a4\work\GeneratedPackage'
+CTASpath=r'C:\CTAS\OOBAPPs\runs\20181101-172218-r2kserg611\work\GeneratedPackage'
 Testroot=r'C:\test\XRMHB'
 gitpath='HCM\source\Packages\HumanCapitalManagementIntegration\Build\XRM\Solutions\HCMCommon\Components\Resources'
 def removefiles():

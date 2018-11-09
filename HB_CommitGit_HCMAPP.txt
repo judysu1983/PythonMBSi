@@ -1,6 +1,7 @@
 HCM;master
-ApplicationCommon;master
-Accounting Foundation;master
+Accounting Foundation
+;master
+ElectronicReporting;master
 
 
 

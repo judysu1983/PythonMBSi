@@ -3,7 +3,7 @@ rem HCMApp and HCMFabric
 TaskEngine @C:\Depots\MBSI\Projects\OOB\UI\BI_OOBApps.arg -scenario:DailyWC -culture:de
 
 cd C:\Python27
-python testEmail.py
+python CalulateTotalwc_sendEmail.py
 
 rem CDM
 rem TaskEngine @C:\Depots\MBSI\Projects\CDM\UI\BI_CDM_UI.arg -scenario:DailyWC -culture:de

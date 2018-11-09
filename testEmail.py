@@ -1,6 +1,6 @@
 import smtplib
 import csv
-import datetime
+import datetime,os
 from email.MIMEMultipart import MIMEMultipart
 from email.MIMEText import MIMEText
 from email.MIMEBase import MIMEBase
@@ -20,7 +20,7 @@ def totalwc(wcfile):
 fromaddr = "v-judysu@microsoft.com"
 toaddr = ["v-judysu@microsoft.com", "ejcho@microsoft.com"]
 td=datetime.datetime.now()
-td=td.strftime("%b.%d")
+td=td.strftime("%y%b%d%H%M")
 
 msg = MIMEMultipart()
  

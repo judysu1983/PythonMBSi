@@ -44,7 +44,7 @@ IF NOT EXIST "%NUGETEXE%" (
         ECHO # Begin installing latest NuGet package for: %%i
         ECHO ####################################################################################################
         ECHO.
-        "%NUGETEXE%" install Microsoft.Dynamics.AX.ApplicationCommonProd.Translations -Version 8.1.1015 -Source https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json -OutputDirectory "%NUGETPACKAGEINSTALLDIR%" -NonInteractive -DirectDownload
+        "%NUGETEXE%" install Microsoft.Dynamics.AX.ApplicationCommonProd.Translations -Version 8.1.1108 -Source https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json -OutputDirectory "%NUGETPACKAGEINSTALLDIR%" -NonInteractive -DirectDownload
         ECHO.
         ECHO ####################################################################################################
         ECHO # Finished installing latest NuGet package for: %%i
@@ -74,7 +74,7 @@ IF NOT EXIST "%NUGETEXE%" (
         ECHO # Begin installing latest NuGet package for: %%i
         ECHO ####################################################################################################
         ECHO.
-        "%NUGETEXE%" install Microsoft.Dynamics.AX.AccountingFoundationProd.Translations -Version 8.1.1030 -Source https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json -OutputDirectory "%NUGETPACKAGEINSTALLDIR%" -NonInteractive -DirectDownload
+        "%NUGETEXE%" install Microsoft.Dynamics.AX.AccountingFoundationProd.Translations -Version 8.1.1122 -Source https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json -OutputDirectory "%NUGETPACKAGEINSTALLDIR%" -NonInteractive -DirectDownload
         ECHO.
         ECHO ####################################################################################################
         ECHO # Finished installing latest NuGet package for: %%i
@@ -89,7 +89,7 @@ IF NOT EXIST "%NUGETEXE%" (
         ECHO # Begin installing latest NuGet package for: %%i
         ECHO ####################################################################################################
         ECHO.
-        "%NUGETEXE%" install Microsoft.Dynamics.AX.ElectronicReportingProd.Translations -Version 8.1.1005 -Source https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json -OutputDirectory "%NUGETPACKAGEINSTALLDIR%" -NonInteractive -DirectDownload
+        "%NUGETEXE%" install Microsoft.Dynamics.AX.ElectronicReportingProd.Translations -Version 8.1.2005 -Source https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json -OutputDirectory "%NUGETPACKAGEINSTALLDIR%" -NonInteractive -DirectDownload
         ECHO.
         ECHO ####################################################################################################
         ECHO # Finished installing latest NuGet package for: %%i
@@ -104,7 +104,7 @@ IF NOT EXIST "%NUGETEXE%" (
         ECHO # Begin installing latest NuGet package for: %%i
         ECHO ####################################################################################################
         ECHO.
-        "%NUGETEXE%" install Microsoft.Dynamics.AX.HCMProd.Translations -Version 8.1.1039-rainmain0007 -Source https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json -OutputDirectory "%NUGETPACKAGEINSTALLDIR%" -NonInteractive -DirectDownload
+        "%NUGETEXE%" install Microsoft.Dynamics.AX.HCMProd.Translations -Version 8.1.2009-rainmain0009 -Source https://msdyneng.pkgs.visualstudio.com/_packaging/AXApplication-Rel/nuget/v3/index.json -OutputDirectory "%NUGETPACKAGEINSTALLDIR%" -NonInteractive -DirectDownload
         ECHO.
         ECHO ####################################################################################################
         ECHO # Finished installing latest NuGet package for: %%i

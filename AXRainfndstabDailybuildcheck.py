@@ -3,8 +3,8 @@ import fileinput
 import re,sys
 import logging
 os.chdir(r'C:\Python27')
-os.remove('RainFNDStablog.txt')
-logging.basicConfig(filename='RainFNDStablog.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+os.remove('1RainFNDStablog.txt')
+logging.basicConfig(filename='1RainFNDStablog.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 ##logging.disable(logging.DEBUG)
 #############
 #####Sanity check on lct files from builds and custom 3 values in each langauge#############
@@ -41,8 +41,8 @@ def del_rw(action, name, exc):
     os.remove(name)
 
 #copy the new/update files from \\dcsrdbldcfsb\Build40\AppMU\8.1.163.0\Retail\IPED\LCT\ar\file.txt.lct to a temp folder
-langs =["ar", "ar-AE", "cs", "da", "de", "de-AT", "de-CH", "en-AU", "en-CA", "en-GB", "en-IE", "en-IN", "en-MY", "en-NZ", "en-SG", "en-ZA", "es", "es-MX", "et", "fi", "fr", "fr-BE", "fr-CA", "fr-CH", "hu", "is", "it", "it-CH", "ja", "lt", "lv", "nb-NO", "nl", "nl-BE", "pl", "pt-BR", "ru", "sv", "th", "tr", "zh-Hans", ]
-#langs =["ar"]
+#langs =["ar", "ar-AE", "cs", "da", "de", "de-AT", "de-CH", "en-AU", "en-CA", "en-GB", "en-IE", "en-IN", "en-MY", "en-NZ", "en-SG", "en-ZA", "es", "es-MX", "et", "fi", "fr", "fr-BE", "fr-CA", "fr-CH", "hu", "is", "it", "it-CH", "ja", "lt", "lv", "nb-NO", "nl", "nl-BE", "pl", "pt-BR", "ru", "sv", "th", "tr", "zh-Hans", ]
+langs =["ar"]
 for l in langs:
     localbuildpath=os.path.join('C:\\test\\'+latest_subdir+'\\'+l+'\\')
     if not os.path.exists(localbuildpath):

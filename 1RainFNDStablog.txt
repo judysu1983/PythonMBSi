@@ -1,0 +1,56 @@
+2018-11-02 11:32:59,926 - INFO - Start finding the latest build
+2018-11-02 11:33:00,095 - DEBUG - The updated build is 7.0.5095.16487
+2018-11-02 11:33:00,095 - DEBUG - \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487
+2018-11-02 11:33:00,095 - DEBUG - The updated build is 7.0.5095.16487
+2018-11-02 11:33:00,095 - DEBUG - \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487
+2018-11-02 11:33:00,095 - DEBUG - The updated build is 7.0.5095.16487
+2018-11-02 11:33:00,095 - DEBUG - \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487
+2018-11-02 11:33:00,095 - DEBUG - The updated build is 7.0.5095.16487
+2018-11-02 11:33:00,127 - DEBUG - \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487
+2018-11-02 11:33:00,127 - DEBUG - The updated build is 7.0.5095.16487
+2018-11-02 11:33:00,127 - DEBUG - \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487
+2018-11-02 11:33:00,127 - DEBUG - The updated build is 7.0.5095.16487
+2018-11-02 11:33:00,127 - DEBUG - \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487
+2018-11-02 11:33:00,127 - DEBUG - The updated build is 7.0.5095.16487
+2018-11-02 11:33:00,127 - DEBUG - \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487
+2018-11-02 11:33:00,127 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\EntityStore.resources.dll.LCT
+2018-11-02 11:33:00,157 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\EntityStore.resources.dll.LCT
+2018-11-02 11:33:00,157 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\FormRunConfiguration.resources.dll.LCT
+2018-11-02 11:33:00,226 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\FormRunConfiguration.resources.dll.LCT
+2018-11-02 11:33:00,226 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\HTMLEditor.resources.dll.LCT
+2018-11-02 11:33:00,257 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\HTMLEditor.resources.dll.LCT
+2018-11-02 11:33:00,257 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\ImageAnnotator.resources.dll.LCT
+2018-11-02 11:33:00,296 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\ImageAnnotator.resources.dll.LCT
+2018-11-02 11:33:00,296 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\Microsoft.Dynamics.AX.Framework.Reports.Shared.dll.LCT
+2018-11-02 11:33:00,342 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\Microsoft.Dynamics.AX.Framework.Reports.Shared.dll.LCT
+2018-11-02 11:33:00,342 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\Security.resources.dll.LCT
+2018-11-02 11:33:00,395 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\Security.resources.dll.LCT
+2018-11-02 11:33:00,395 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\SYS.resources.dll.LCT
+2018-11-02 11:33:04,181 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\SYS.resources.dll.LCT
+2018-11-02 11:33:04,181 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\SysHelp.resources.dll.LCT
+2018-11-02 11:33:04,226 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\SysHelp.resources.dll.LCT
+2018-11-02 11:33:04,226 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\AOSEventFile.dll.LCT
+2018-11-02 11:33:04,279 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\AOSEventFile.dll.LCT
+2018-11-02 11:33:04,279 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\ApplicationPlatform.resources.dll.LCT
+2018-11-02 11:33:04,358 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\ApplicationPlatform.resources.dll.LCT
+2018-11-02 11:33:04,358 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\AxSYSen-us.ktd.LCT
+2018-11-02 11:33:05,250 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\AxSYSen-us.ktd.LCT
+2018-11-02 11:33:05,250 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\CDSAIntegration.resources.dll.LCT
+2018-11-02 11:33:05,276 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\CDSAIntegration.resources.dll.LCT
+2018-11-02 11:33:05,276 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\CLIButtons.resources.dll.LCT
+2018-11-02 11:33:05,308 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\CLIButtons.resources.dll.LCT
+2018-11-02 11:33:05,308 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\CLICore.resources.dll.LCT
+2018-11-02 11:33:05,338 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\CLICore.resources.dll.LCT
+2018-11-02 11:33:05,338 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\CLIFiltering.resources.dll.LCT
+2018-11-02 11:33:05,375 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\CLIFiltering.resources.dll.LCT
+2018-11-02 11:33:05,375 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\CLIFormPersonalization.resources.dll.LCT
+2018-11-02 11:33:05,423 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\CLIFormPersonalization.resources.dll.LCT
+2018-11-02 11:33:05,423 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\CLINavigationBar.resources.dll.LCT
+2018-11-02 11:33:05,460 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\CLINavigationBar.resources.dll.LCT
+2018-11-02 11:33:05,460 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\ColorPicker.resources.dll.LCT
+2018-11-02 11:33:05,476 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\ColorPicker.resources.dll.LCT
+2018-11-02 11:33:05,476 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\DMF.resources.dll.LCT
+2018-11-02 11:33:05,691 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\DMF.resources.dll.LCT
+2018-11-02 11:33:05,691 - INFO - Build file path is \\dcsrdbldcfsb\Build08\RainFNDStab\7.0.5095.16487\Retail\IPED\LCT\ar\DualWriteLabels.resources.dll.LCT
+2018-11-02 11:33:05,739 - INFO - Copy to as local   C:\test\7.0.5095.16487\ar\DualWriteLabels.resources.dll.LCT
+2018-11-02 11:33:05,739 - DEBUG - ===========The updated build is 7.0.5095.16487

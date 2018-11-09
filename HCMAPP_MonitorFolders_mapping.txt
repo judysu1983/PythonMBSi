@@ -19,3 +19,4 @@ D365Shell\UI\Master\Source\Portal;Dynamics365-Dynamics365-Portal;*.resx;master
 AX\Dynamics365Marketing\UI\master\Source;bapiweb-Dynamics365;*.resx;master
 LCS\UI\Master\Source;Dynamics-LCS;*.resx;master
 MR\AX8\UI\Master\Source;MR-Localization;*.wxl;master
+OOB\UI\master\Source\Tax;Tax;*.resx;master
