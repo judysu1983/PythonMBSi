@@ -33,6 +33,7 @@ echo #############copy over udpated files############
 pause
 
 git add *.lcl
+git add *.resx
 git status
 
 
