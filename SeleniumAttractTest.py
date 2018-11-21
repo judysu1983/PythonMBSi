@@ -45,6 +45,7 @@ def langswitching(browser,i,lang):
 ##    langbutton=browser.find_element_by_xpath('/html/body/app-root/div/div[2]/div/ng-component/ms-settings/main/div/nav/div/ul/li[2]/button').click()
     browser.refresh()
     time.sleep(3)
+    print('==================Start taking screenshots for '+str(i)+' '+lang+'==================')
     pyautogui.click(149,335)
     try:
         langbutton=WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.XPATH, '//*[@id="settings-viewport"]/app-language-settings/div/div/button')))
@@ -201,10 +202,14 @@ def attractss(browser,lang):
     i=i+1
     pyautogui.click(1072,631) #cancel delete the job
 
-    pyautogui.click(378,330) # hiring team page
+    pyautogui.click(417,330) # hiring team page
     time.sleep(5)
+    pyautogui.click(414,334) # hiring team page
+    time.sleep(5)
+
     pyautogui.screenshot('Attract\\{0}\\{1}.png'.format(lang,i))
     i=i+1
+    time.sleep(5)
 
     try:
         Elem=WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.XPATH, '/html/body/app-root/div/div[2]/div/app-welcome/ms-nav-pane/mat-drawer-container/mat-drawer-content/job-hub/job-hub-header/main/article/div/content-container/hiring-team/div[2]/table/tbody/tr/td[3]/button')))
@@ -222,8 +227,14 @@ def attractss(browser,lang):
     browser.refresh()
     time.sleep(5)
     
-    pyautogui.click(476,321) # process  page
+    pyautogui.click(504,321) # process  page
     time.sleep(2)
+    try:
+        Elem=WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.XPATH, '/html/body/app-root/div/div[2]/div/app-welcome/ms-nav-pane/mat-drawer-container/mat-drawer-content/job-hub/job-hub-header/header/div/ms-pivot/div/button[3]')))
+        print('Deletebutton is ready')
+    except TimeoutException:
+        print('Deletebutton Try again')
+    browser.find_element_by_xpath('/html/body/app-root/div/div[2]/div/app-welcome/ms-nav-pane/mat-drawer-container/mat-drawer-content/job-hub/job-hub-header/header/div/ms-pivot/div/button[3]').click()
     pyautogui.screenshot('Attract\\{0}\\{1}.png'.format(lang,i))
     i=i+1
 
@@ -376,18 +387,32 @@ def attractss(browser,lang):
 
     pyautogui.click(1870,188) #click close button
     time.sleep(5)
+    try:
+        Elem=WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.XPATH, '/html/body/app-root/div/div[2]/div/app-welcome/ms-nav-pane/mat-drawer-container/mat-drawer-content/job-hub/candidate-application/main/article/content-container/div/div[4]/div/button[1]')))
+        print('advancestagebutton is ready')
+    except TimeoutException:
+        print('advancestagebutton Try again')
+    time.sleep(2)
 
+    browser.refresh()
+    try:
+        Elem=WebDriverWait(browser, delay).until(EC.presence_of_element_located((By.XPATH, '/html/body/app-root/div/div[2]/div/app-welcome/ms-nav-pane/mat-drawer-container/mat-drawer-content/job-hub/candidate-application/main/article/content-container/div/div[4]/div/button[1]')))
+        print('advancestagebutton is ready')
+    except TimeoutException:
+        print('advancestagebutton Try again')
+    time.sleep(2)   
     #click advance stage button to intervew stage
-    advancestagebutton=browser.find_element_by_xpath('/html/body/app-root/div/div[2]/div/app-welcome/ms-nav-pane/mat-drawer-container/mat-drawer-content/job-hub/candidate-application/main/article/content-container/div/div[4]/div/button[1]').click()
-    time.sleep(8)
+    #advancestagebutton=browser.find_element_by_xpath('/html/body/app-root/div/div[2]/div/app-welcome/ms-nav-pane/mat-drawer-container/mat-drawer-content/job-hub/candidate-application/main/article/content-container/div/div[4]/div/button[1]').click()
+    pyautogui.click(1825,400)
+    time.sleep(5)
     pyautogui.screenshot('Attract\\{0}\\{1}.png'.format(lang,i))
     i=i+1
 
     #click feedback button
-    feedbackbuttons=browser.find_elements_by_xpath("//*[contains(text(), 'Provide feedback')]")
-    print(feedbackbuttons)
+    pyautogui.click(1912,1003)
     time.sleep(2)
-    feedbackbutton=feedbackbuttons[0].click()
+    #feedbackbuttons=browser.find_elements_by_xpath("//*[contains(text(), 'Provide feedback')]")
+    pyautogui.click(1430,852) #click feedback button
     time.sleep(5)
     pyautogui.screenshot('Attract\\{0}\\{1}.png'.format(lang,i))
     i=i+1
@@ -396,7 +421,8 @@ def attractss(browser,lang):
     time.sleep(5)
 
         #click advance stage button to offer stage
-    advancestagebutton=browser.find_element_by_xpath('/html/body/app-root/div/div[2]/div/app-welcome/ms-nav-pane/mat-drawer-container/mat-drawer-content/job-hub/candidate-application/main/article/content-container/div/div[4]/div/button[1]').click()
+    #advancestagebutton=browser.find_element_by_xpath('/html/body/app-root/div/div[2]/div/app-welcome/ms-nav-pane/mat-drawer-container/mat-drawer-content/job-hub/candidate-application/main/article/content-container/div/div[4]/div/button[1]').click()
+    pyautogui.click(1825,400)
     time.sleep(2)
     pyautogui.screenshot('Attract\\{0}\\{1}.png'.format(lang,i))
     i=i+1
@@ -429,10 +455,13 @@ def attractss(browser,lang):
 
     pyautogui.click(1667,870)#cancel
 
-    linkinpage=browser.find_element_by_xpath('/html/body/app-root/div/div[2]/div/app-welcome/ms-nav-pane/mat-drawer-container/mat-drawer-content/job-hub/candidate-application/header/div/ms-pivot/div/button[5]').click()
+    addtalentpoolbutton=browser.find_element_by_xpath('/html/body/app-root/div/div[2]/div/app-welcome/ms-nav-pane/mat-drawer-container/mat-drawer-content/job-hub/candidate-application/header/applicant-banner/div/div[2]/button').click()
     time.sleep(2)
     pyautogui.screenshot('Attract\\{0}\\{1}.png'.format(lang,i))
-    i=i+1           
+    i=i+1
+
+    pyautogui.click(1685,687)#cancel
+          
 ##    #offerbutton=browser.find_element_by_xpath('//*[@id="activity-container-8"]/application-participant-activity/offer-summary/section/div[2]/section/button').click()
 ##    #time.sleep(10)
 ##   # pyautogui.click(369,21) #click offer tab
@@ -440,8 +469,11 @@ def attractss(browser,lang):
 ##    #pyautogui.screenshot('Attract\\{0}\\{1}.png'.format(lang,i))
 ##    #i=i+1
 
-langs=['en-US', 'en-CA']
-i=11
+#langs=['en-US', 'en-CA']
+#langs=['eu-ES', 'bg', 'ca-ES', 'zh-Hans-CN', 'zh-Hant-HK', 'zh-Hant-TW', 'hr', 'cs', 'da', 'nl-BE', 'nl', 'en-US', 'en-CA', 'en-GB', 'en-AU', 'en-IE', 'en-IN', 'en-MY', 'en-NZ', 'en-SG', 'en-ZA', 'et', 'fi', 'fr-BE', 'fr-CA', 'fr', 'fr-CH', 'de', 'de-AT', 'de-CH', 'gl-ES', 'el', 'hi', 'hu', 'it', 'it-CH', 'id', 'is', 'ja', 'kk', 'ko', 'lt', 'lv', 'ms', 'nb', 'pl', 'pt-BR', 'pt', 'ro', 'ru', 'sr-Cyrl-RS', 'sr-Latn-RS', 'sk', 'sl', 'es', 'es-MX', 'sv', 'th', 'tr', 'uk', 'vi']
+langs=['gl-ES', 'el', 'hi', 'hu', 'it', 'it-CH', 'id', 'is', 'ja', 'kk', 'ko', 'lt', 'lv', 'ms', 'nb', 'pl', 'pt-BR', 'pt', 'ro', 'ru', 'sr-Cyrl-RS', 'sr-Latn-RS', 'sk', 'sl', 'es', 'es-MX', 'sv', 'th', 'tr', 'uk', 'vi']
+
+i=30
 for l in langs:
     langswitching(browser,i,l)
     attractss(browser,l)
