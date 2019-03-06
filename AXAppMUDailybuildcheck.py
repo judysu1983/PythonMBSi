@@ -7,7 +7,7 @@ logging.disable(logging.DEBUG)
 
 logging.info('Start finding the latest build')
 #find the latest build
-AppMUPath=r'\\dcsrdbldcfsb\Build40\AppMU'
+AppMUPath=r'\\xxx\Build40\AppMU'
 os.chdir(AppMUPath)
 all_subdirs=os.listdir(AppMUPath)
 
@@ -47,7 +47,7 @@ def del_rw(action, name, exc):
     os.chmod(name, stat.S_IWRITE)
     os.remove(name)
 
-#copy the new/update files from \\dcsrdbldcfsb\Build40\AppMU\8.1.163.0\Retail\IPED\LCT\ar\file.txt.lct to a temp folder
+#copy the new/update files from \\xxx\Build40\AppMU\8.1.163.0\Retail\IPED\LCT\ar\file.txt.lct to a temp folder
 #langs =["ar", "ar-AE", "cs", "da", "de", "de-AT", "de-CH", "en-AU", "en-CA", "en-GB", "en-IE", "en-IN", "en-MY", "en-NZ", "en-SG", "en-ZA", "es", "es-MX", "et", "fi", "fr", "fr-BE", "fr-CA", "fr-CH", "hu", "is", "it", "it-CH", "ja", "lt", "lv", "nb-NO", "nl", "nl-BE", "pl", "pt-BR", "ru", "sv", "th", "tr", "zh-Hans", ]
 langs =["ar"]
 for l in langs:
